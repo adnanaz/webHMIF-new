@@ -421,15 +421,16 @@
             <p>Aspirasikan Suaramu disini guna Informatika yang lebih baik</p>
             <article class="card-overlay">
                 <div class="card">
-                    <form>
+                    <form action="{{ route('adminaspirasi.store') }}" method="POST" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="pengirim">Dari : </label>
-                            <input type="text" class="form-control" id="pengirim" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" name="dari" id="pengirim" aria-describedby="emailHelp">
 
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Aspirasi/Komentar</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" name="aspirasi" rows="10"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Kirim</button>
                     </form>
