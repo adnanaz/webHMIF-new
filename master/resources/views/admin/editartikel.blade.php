@@ -239,6 +239,12 @@
                                             with anyone else.</small>
                                     </div>
                                     <div class="form-group">
+                                        <label for="penulis">penulis</label>
+                                        <input type="text" class="form-control" id="penulis" name="penulis" aria-describedby="penulishelp" value="{{ $artikel->penulis }}">
+                                        <small id="penulishelp" class="form-text text-muted">We'll never share your email
+                                            with anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Artikel</label>
                                         <textarea class="form-control" id="exampleFormControlTextarea1"
                                             rows="4" name="artikel">{{ $artikel->artikel }}</textarea>

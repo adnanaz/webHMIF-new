@@ -42,6 +42,7 @@ class AdminArtikelController extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|max:255',
+            'penulis' => 'required|max:255',
             'artikel' => 'required',
             'uploadFile' => 'required',
             'uploadFile.*' => 'image|mimes:jpeg,png,jpg,gif,svg'
@@ -72,6 +73,7 @@ class AdminArtikelController extends Controller
         $article = new Article;
         $article->judul = $request->judul;
         $article->slug = Str::slug($request->judul);
+        $article->penulis = $request->penulis;
         $article->artikel = $request->artikel;
         $article->gambar = json_encode($insert);
 
@@ -117,6 +119,7 @@ class AdminArtikelController extends Controller
 
         $this->validate($request, [
             'judul' => 'required|max:255',
+            'penulis' => 'required|max:255',
             'artikel' => 'required',
             'uploadFile.*' => 'image|mimes:jpeg,png,jpg,gif,svg'
         ]);      
@@ -157,6 +160,7 @@ class AdminArtikelController extends Controller
 
         $artikel->judul = $request->judul?$request->judul : $artikel->judul;
         $artikel->slug = Str::slug($request->judul);
+        $artikel->penulis = $request->penulis?$request->penulis : $artikel->penulis;
         $artikel->artikel = $request->artikel?$request->artikel : $artikel->artikel;
         $artikel->gambar = $request->file('uploadFile')?$insert : $artikel->gambar;
 

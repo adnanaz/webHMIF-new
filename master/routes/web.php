@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'adminhimpunanmahasiswaif'] , function(){
+Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , function(){
     Route::group(['prefix' => 'artikel'], function () {
         Route::get('/tambah','AdminArtikelController@create')->name('adminartikel.create');
         Route::post('/tambah','AdminArtikelController@store')->name('adminartikel.store');
@@ -33,7 +33,29 @@ Route::group(['prefix'=>'adminhimpunanmahasiswaif'] , function(){
         Route::post('/{id}/update','AdminEventController@update')->name('adminberita.update');
         Route::get('/{id}/delete','AdminEventController@destroy')->name('adminberita.delete');
     });
-    
+
+    Route::group(['prefix' => 'merchandise'], function () {
+        Route::get('/tambah','MerchandiseController@create')->name('adminmerchandise.create');
+        Route::post('/tambah','MerchandiseController@store')->name('adminmerchandise.store');
+        Route::get('/{id}/delete','MerchandiseController@destroy')->name('adminmerchandise.delete');
+    });
+
+    Route::group(['prefix' => 'aspirasi'], function () {
+        Route::get('/tambah','AspirationController@create')->name('adminaspirasi.create');
+        Route::post('/tambah','AspirationController@store')->name('adminaspirasi.store');
+        Route::get('/{id}/delete','AspirationController@destroy')->name('adminaspirasi.delete');
+    });
+
+    Route::group(['prefix' => 'header'], function () {
+        Route::get('/edit','HeaderController@edit')->name('adminheader.edit');
+        Route::post('/{id}/update','HeaderController@update')->name('adminheader.update');
+    });
+
+    Route::group(['prefix' => 'youtube'], function () {
+        Route::get('/tambah','YoutubeController@create')->name('adminyoutube.create');
+        Route::post('/tambah','YoutubeController@store')->name('adminyoutube.store');
+        Route::get('/{id}/delete','YoutubeController@destroy')->name('adminyoutube.delete');
+    });
 }); 
 
 Auth::routes();
