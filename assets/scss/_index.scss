@@ -1,6 +1,28 @@
+.navbar-nav {
+  flex-direction: row;
+
+  li  {
+    margin: 0 2rem;
+
+    a {
+      font-size: 1.2rem;
+      color : $head-font-color;
+    }
+  }
+
+
+}  
+  
   .background {
-    background: url('../img/bg2.png') center top;
+    background: url('../img/bgfs.svg') center no-repeat;
     background-size: cover;
+    background-size: 100%;
+  }
+
+
+  .color {
+    color: $hover-color;
+
   }
 
   .head{
@@ -14,16 +36,32 @@
           font-size: 1rem;
       }
   
-      figure {
+      .fig1 {
           padding: 1rem 11rem 0rem 0rem;
           text-align: center;
       }
   
       .fig__img {
-          width: 75%;
+          width: 108px;
+      }
+
+      .fig2 {
+          text-align: center;
+
+      }
+  
+      .fig__img2 {
+          width: 150px;
+          padding-top: 5rem;
+    
       }
   }
  
+}
+
+.flex-model {
+  display: flex;
+  flex-flow: column wrap;
 }
 
 .berita {
@@ -131,18 +169,35 @@
     }
 }
 
+.struktur {
+  .img__struktur {
+    padding: 0 2rem;
+  }
+}
+
 .divisi {
     .flex {
         margin: 5rem 0;
         display: flex;
         flex-flow: wrap column;
+        justify-content: center;
 
-        figure {
+        .flex-dynamic {
+          display: flex;
+
+          flex-flow: row wrap;
+          justify-content: center;
+
+          figure {
+            margin: 1rem;
             .img__divisi {
-                padding: 0 6rem;
-                width: 100%;
+              
+                width: 20vh;
             }
         }
+        }
+
+        
 
         figcaption {
             margin: 1rem 0;
@@ -320,6 +375,7 @@
     .flex-row {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
     }
 
     .merchandise {
@@ -351,7 +407,7 @@
     }
   
     &__item {
-      color: $secondary-color;
+      color:$head-font-color;
   
       &--head {
         margin-top: 1rem;
@@ -364,7 +420,7 @@
           margin: 0;
           width: 52%;
           border: solid 1px black;
-          background-color: $secondary-color;
+          background-color:$head-font-color;
         }
   
         .hr-2 {
@@ -399,7 +455,7 @@
   
             .body__span {
               padding:  0 1rem;
-              color: $secondary-color;
+              color:$head-font-color;
              
             }
           }
@@ -481,6 +537,217 @@
       width: 100%;
       margin: 2rem 2rem 0 2rem ;
     }
-  
-  
+
+
   }
+      
+  .hide {
+    display: none;
+  }
+  @include media-sm {
+
+
+    .content__text {
+      font-size: 1.2rem !important;
+    }
+    .card-overlay {
+      max-width: 25rem !important;
+    }
+
+    .head{
+      .container-fluid {
+        
+          .content__text {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 0 1rem;
+            font-size: 1rem;
+        }
+    
+        .fig1 {
+            padding: 1rem 12rem 0rem 0rem;
+            text-align: center;
+        }
+    
+        .fig__img {
+            width: 165px;
+        }
+  
+        .fig2 {
+            padding: 1rem 0 0rem 0rem;
+            text-align: center;
+  
+        }
+    
+        .fig__img2 {
+            width: 250px;
+      
+        }
+    }
+   
+  }
+
+  .divisi {
+    .flex {
+        margin: 5rem 0;
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: center;
+
+        .flex-dynamic {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: center;
+
+          figure {
+            .img__divisi {
+              
+                width: 20vh;
+            }
+        }
+        }
+
+        
+
+        figcaption {
+            margin: 1rem 0;
+        }
+    }
+}
+
+}
+
+@include media-md {
+  h5, h3 {
+    font-size: 1.5rem !important;
+  }
+
+  span,p,figcaption{
+    font-size: 1.2rem;
+  }
+
+  .content__text {
+    font-size: 1.2rem !important;
+  }
+  .card-overlay {
+    max-width: 30rem !important;
+  }
+
+  .head{
+    .container-fluid {
+      
+        .content__text {
+          text-align: center;
+          margin-top: 2rem;
+          padding: 0 1rem;
+          font-size: 1rem;
+      }
+  
+      .fig1 {
+          padding-left:2rem ;
+          text-align: left;
+      }
+  
+      .fig__img {
+          width: 165px;
+      }
+
+      .fig2 {
+          padding-right: 2rem;
+          text-align: right;
+
+      }
+  
+      .fig__img2 {
+          width: 250px;
+    
+      }
+  }
+ 
+}
+
+.divisi {
+  .flex {
+      margin: 5rem 0;
+      display: flex;
+      flex-flow: wrap column;
+
+      // figure {
+      //     .img__divisi {
+      //         padding: 0 10rem;
+      //         width: 100%;
+      //     }
+      // }
+
+      figcaption {
+          margin: 1rem 0;
+      }
+  }
+}
+}
+
+@include media-l {
+  .hide {
+    display: flex;
+  }
+
+.content__text {
+  font-size: 1.5rem !important;
+}
+
+h5 {
+  font-size: 1.7rem !important;
+}
+
+h3 {
+  font-size: 1.3rem !important;
+}
+
+p,figcaption,span {
+  font-size: 1.3rem
+}
+
+  .card-overlay {
+    max-width: 35rem !important;
+  }
+
+//   .divisi .flex figure .img__divisi {
+//     padding: 0 15rem;
+//     width: 100%;
+// }
+}
+
+@include media-lg {
+  
+  .flex-model {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+
+  }
+
+  .menu {
+    display: none;
+  }
+
+
+  h5 {
+    font-size: 1.7rem !important;
+  }
+  
+  h3 {
+    font-size: 1.3rem !important;
+  }
+
+//   .divisi .flex figure .img__divisi {
+//     padding: 0 25rem;
+//     width: 100%;
+// }
+}
+@include media-xl {
+//   .divisi .flex figure .img__divisi {
+//     padding: 0 30rem;
+//     width: 100%;
+// }
+}
