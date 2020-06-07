@@ -13,9 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('layout.pengunjung');
+// });
+
+Route::get('/','UtamaController@index')->name('utama.index');
+Route::get('/detailberitaacara','EventController@index')->name('detailberitaacara.index');
+Route::get('/detailartikel','ArtikelController@index')->name('detailartikel.index');
 
 Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , function(){
     Route::get('/','AspirationController@dashboard')->name('dashboard.dashboard');
