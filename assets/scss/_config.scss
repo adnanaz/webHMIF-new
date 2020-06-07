@@ -30,12 +30,16 @@ h1,h2,h3,h4,h5 {
 }
 
 a {
-  color: set-text-color($primary-color);
+  color: set-text-color($head-font-color);
   text-decoration: none;
 }
 
 li {
     list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 
@@ -52,3 +56,48 @@ li {
       @return #000;
     }
   }
+
+ 
+  
+  @mixin media-sm {
+    @media screen and (min-width: 460px) {
+      @content;
+    }
+  }
+  @mixin media-md {
+    @media screen and (min-width: 568px) {
+      @content;
+    }
+  }
+  @mixin media-l {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @mixin media-lg {
+    @media screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+  @mixin media-xl {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+  
+  // @mixin media-md {
+  //   @media screen and (min-width: 768px) {
+  //     @content;
+  //   }
+  // }
+  // @mixin media-lg {
+  //   @media screen and (min-width: 1024px) {
+  //     @content;
+  //   }
+  // }
+  // @mixin media-xl {
+  //   @media screen and (min-width: 1600px) {
+  //     @content;
+  //   }
+  // }
+  
