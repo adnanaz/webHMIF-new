@@ -78,10 +78,10 @@
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
-                <img src="../scss/assets/img/logo-fbb.png" alt="AdminLTE Logo"
-                    class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <a href="index.admin.html" class="brand-link">
+                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3 x HMIF</span>
             </a>
 
             <!-- Sidebar -->
@@ -89,7 +89,7 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        <img src="../scss/assets/img/dummy-profile.jpg" width="160px" height="160px"
+                        <img src="dist/img/user2-160x160.jpg" width="160px" height="160px"
                             class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
@@ -109,18 +109,18 @@
                                 <p>
                                     Dashboard
                                     <i class="right fas fa-angle-left"></i>
-                                    <span class="badge badge-info right">1</span>
+                                    <span class="badge badge-info right">2</span>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="./berita.admin.html" class="nav-link active">
+                                    <a href="./berita.admin.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Isi Berita</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./artikel.admin.html" class="nav-link">
+                                    <a href="./artikel.admin.html" class="nav-link  active">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Isi Artikel</p>
                                     </a>
@@ -140,7 +140,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                                    <a href="edit.content.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Header</p>
                                     </a>
@@ -158,7 +158,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="data-order.html" class="nav-link">
+                                    <a href="aspirasi.admin.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Aspirasi Masuk</p>
                                     </a>
@@ -177,9 +177,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="settings.html" class="nav-link">
+                                    <a href="add.account.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Buat akun</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="edit.password.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit akun</p>
                                     </a>
                                 </li>
 
@@ -208,7 +214,9 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <span class="msg">Input Berita Acara</span>
+                            <span class="msg">
+                                <h3>Input Artikel Baru</h3>
+                            </span>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -226,7 +234,9 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <span class="card-title">Berita acara</span>
+                                <span class="card-title">
+                                    <h5>Artikel</h5>
+                                </span>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -234,16 +244,21 @@
                                     <div class="form-group">
                                         <label for="judul">Judul</label>
                                         <input type="text" class="form-control" id="judul" aria-describedby="judulhelp">
-                                        <small id="judulhelp" class="form-text text-muted">We'll never share your email
-                                            with anyone else.</small>
+                                        <small id="judulhelp" class="form-text text-muted">Isi Judul Artikel
+                                            anda</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="penulis">Penulis</label>
+                                        <input type="text" class="form-control" id="penulis"
+                                            aria-describedby="penulishelp">
+                                        <small id="penulishelp" class="form-text text-muted">Nama anda</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="tanggal">Artikel rilis</label>
                                         <input type="text" class="form-control" id="tanggal"
                                             aria-describedby="tanggalhelp">
-                                        <small id="tanggalhelp" class="form-text text-muted">We'll never share your
-                                            email
-                                            with anyone else.</small>
+                                        <small id="tanggalhelp" class="form-text text-muted">Kapan artikel anda
+                                            rilis ex:20 September 2020</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleFormControlTextarea1">Artikel</label>
@@ -253,10 +268,11 @@
                                     <div class="custom-file mb-2">
                                         <input type="file" class="custom-file-input" id="customFile">
                                         <label class="custom-file-label" for="customFile">Choose file</label>
-                                        <small id="uploadhelp" class="form-text text-muted">upload bisa lebih dari 1
+                                        <small id="uploadhelp" class="form-text text-muted mt-2">upload bisa lebih dari
+                                            1
                                             file.</small>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary mt-2 w-100">Submit</button>
                                 </form>
                             </div>
                             <!-- /.card-body -->

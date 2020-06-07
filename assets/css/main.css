@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5 {
 }
 
 a {
-  color: set-text-color(#002382);
+  color: set-text-color(#504658);
   text-decoration: none;
 }
 
@@ -524,5 +524,9 @@ li {
   font-size: 45px;
   text-align: center;
   font-style: italic;
+}
+
+a {
+  color: #504658;
 }
 /*# sourceMappingURL=main.css.map */

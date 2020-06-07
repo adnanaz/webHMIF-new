@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>AdminLTE 3 | Settings Page</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font Awesome -->
@@ -109,7 +109,7 @@
                                 <p>
                                     Dashboard
                                     <i class="right fas fa-angle-left"></i>
-                                    <span class="badge badge-info right">2</span>
+                                    <span class="badge badge-info right">1</span>
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
@@ -120,7 +120,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="./artikel.admin.html" class="nav-link ">
+                                    <a href="./artikel.admin.html" class="nav-link  ">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Isi Artikel</p>
                                     </a>
@@ -129,8 +129,8 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item has-treeview  menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Edit Content
@@ -140,7 +140,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="edit.content.html" class="nav-link active">
+                                    <a href="edit.content.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Header</p>
                                     </a>
@@ -166,8 +166,8 @@
                             </ul>
                         </li>
 
-                        <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                        <li class="nav-item has-treeview  menu-open">
+                            <a href="#" class="nav-link active">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <span class="badge badge-info right">1</span>
                                 <p>
@@ -177,15 +177,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="add.account.html" class="nav-link">
+                                    <a href="edit.password.html" class="nav-link ">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Buat akun</p>
+                                        <p>Edit Password akun</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="edit.password.html" class="nav-link">
+                                    <a href="add.account.html" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Edit akun</p>
+                                        <p>Buat akun</p>
                                     </a>
                                 </li>
 
@@ -206,36 +206,59 @@
             </div>
             <!-- /.sidebar -->
         </aside>
+
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-                <h5>Edit Your Header Here</h5>
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h5>Tambah Akun</h5>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Account</a></li>
+                                <li class="breadcrumb-item active">Settings</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
             </section>
 
             <!-- Main content -->
             <section class="content">
                 <div class="row">
                     <div class="col-12">
-                        <div class="preview" style="background: url('assets/img/preview__header.png') center top;
-                        background-size: cover; padding: 17rem 5rem 20rem 5rem; width:100%">
-                            <h5 class="text-center">Menciptakan komunikasi yang baik dengan pihak
-                                Program Studi Informatika Universitas AMIKOM Yogyakarta.</h5>
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <div class="col-12">
-                        <form>
-                            <div class="form-group">
-                                <label for="judul">Header-Post</label>
-                                <input type="text" class="form-control" id="judul" aria-describedby="judulhelp">
-                                <small id="judulhelp" class="form-text text-muted">Isi Tulisan yang ingin
-                                    dirubah</small>
-                            </div>
+                        <div class="container">
+                            <div class="account border rounded p-5">
+                                <div class="leftside">
 
-                            <button type="submit" class="btn btn-warning mt-2 w-100">Preview</button>
-                            <button type="submit" class="btn btn-primary mt-2 w-100">Submit</button>
-                        </form>
+                                    <form action="#" class="account__form">
+                                        <div class="form-group">
+                                            <label for="nama">User ID</label>
+                                            <input type="password" class="form-control" id="nama" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="new-pwd">Password Baru</label>
+                                            <input type="password" class="form-control" id="new-pwd" placeholder="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confim-pwd">Confirm Password Baru</label>
+                                            <input type="password" class="form-control" id="confirm-pwd" placeholder="">
+                                        </div>
+                                        <button type="submit"
+                                            class="btn btn-primary mt-3 mb-3 w-100 text-center">Simpan</button>
+                                    </form>
+                                </div>
+                                <div class="rightside">
+                                    <h5>Password Must Contain : </h5>
+                                    <p class="text-danger">At least 1 upper case letter (A-Z)</p>
+                                    <p class="text-danger">At least 1 number (0-9)</p>
+                                    <p class="text-danger">At least 8 character</p>
+                                </div>
+                            </div>
+                        </div>
                         <!-- /.col -->
                     </div>
                     <!-- /.row -->
