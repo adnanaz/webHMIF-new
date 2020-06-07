@@ -1,0 +1,54 @@
+$primary-color   : #002382;
+$secondary-color : #FFC400;
+$button-color    : #FFB5B5;
+$head-font-color : #504658;
+$p-font-color    : #333;
+$hover-color     : #CE2E6C;
+$bg-color        : #9A8EA5;
+
+
+
+//global styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    color: set-text-color($primary-color);
+    height: 100vh;
+    font-family     : 'Varela Round', sans-serif;
+    //khusus mobile size
+    padding-right: 1rem;
+
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: 400;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+//transisiton effect
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+  }
+
+//color gradation automation
+  @function set-text-color($color) {
+    @if (lightness($color) > 40%) {
+      @return #fff;
+    } @else {
+      @return #000;
+    }
+  }

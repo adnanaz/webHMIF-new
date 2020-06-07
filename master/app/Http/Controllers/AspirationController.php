@@ -17,9 +17,21 @@ class AspirationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function dashboard()
+    {
+        $aspirasi = Aspiration::orderBy('id', 'DESC')->get();
+        return view('admin.dashboard', compact('aspirasi'));
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
-        //
+        $aspirasi = Aspiration::orderBy('id', 'DESC')->get();
+        return view('admin.aspirasi', compact('aspirasi'));
     }
 
     /**

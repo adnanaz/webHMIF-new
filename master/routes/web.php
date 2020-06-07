@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , function(){
+    Route::get('/','AspirationController@dashboard')->name('dashboard.dashboard');
+    Route::get('/gantipassword','GantiPasswordController@index')->name('gantipassword.index');
+    Route::post('/password','GantiPasswordController@changePassword')->name('gantipassword.changePassword');
+
     Route::group(['prefix' => 'artikel'], function () {
         Route::get('/tambah','AdminArtikelController@create')->name('adminartikel.create');
         Route::post('/tambah','AdminArtikelController@store')->name('adminartikel.store');
@@ -41,6 +45,7 @@ Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , func
     });
 
     Route::group(['prefix' => 'aspirasi'], function () {
+        Route::get('/','AspirationController@index')->name('aspirasi.index');
         Route::get('/tambah','AspirationController@create')->name('adminaspirasi.create');
         Route::post('/tambah','AspirationController@store')->name('adminaspirasi.store');
         Route::get('/{id}/delete','AspirationController@destroy')->name('adminaspirasi.delete');
