@@ -45,8 +45,8 @@
                                         aria-describedby="tanggalhelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">berita acara</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" name="berita_acara"
+                                    <label for="berita">berita acara</label>
+                                    <textarea class="form-control" id="berita" name="berita_acara"
                                         rows="4"></textarea>
                                 </div>
                                 <div class="custom-file mb-2">
@@ -67,5 +67,15 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    <script>
+        CKEDITOR.replace( 'berita' , {
+            width: 1120,
+            height: 600,
 
+            filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+            filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+        });
+    </script>
 @endsection
