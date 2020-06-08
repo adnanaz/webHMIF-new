@@ -44,8 +44,8 @@
                                     <input type="text" class="form-control" id="penulis" name="penulis" aria-describedby="penulishelp">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Artikel</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                    <label for="artikel">Artikel</label>
+                                    <textarea class="form-control" id="artikel"
                                         rows="4" name="artikel"></textarea>
                                 </div>
                                 <div class="custom-file mb-2">
@@ -66,5 +66,15 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+    <script>
+        CKEDITOR.replace( 'artikel' , {
+            width: 1120,
+            height: 600,
 
+            filebrowserBrowseUrl: '/ckfinder/ckfinder.html',
+            filebrowserImageBrowseUrl: '/ckfinder/ckfinder.html?type=Images',
+            filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+            filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
+        });
+    </script>
 @endsection
