@@ -9,8 +9,6 @@
       color : $head-font-color;
     }
   }
-
-
 }  
   
   .background {
@@ -76,7 +74,7 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
+
       
         /* Center slide text vertically */
         display: -webkit-box;
@@ -119,6 +117,7 @@
             border-top: 20px solid yellow;
             position: absolute;
             filter: drop-shadow(-5px 5px 3px rgba(0,0,0,0.5));
+            z-index: 1;
             }
 
             &:before{
@@ -257,6 +256,7 @@
             border-right: 20px solid yellow;
             border-top: 20px solid yellow;
             position: absolute;
+            z-index: 1;
             filter: drop-shadow(-5px 5px 3px rgba(0,0,0,0.5));
             }
 
@@ -327,6 +327,7 @@
             border-right: 20px solid yellow;
             border-top: 20px solid yellow;
             position: absolute;
+            z-index: 1;
             filter: drop-shadow(-5px 5px 3px rgba(0,0,0,0.5));
             }
 
@@ -390,160 +391,13 @@
     }
 }
 
-.footer{
-    position: relative;
-    top: -7%;
-    z-index: 1;
-  
-    background: url('../img/bgFoot.svg') center;
-    background-size: cover;
-  
-    &__flex {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      flex-wrap: wrap;
-     
-    }
-  
-    &__item {
-      color:$head-font-color;
-  
-      &--head {
-        margin-top: 1rem;
-        padding: 1rem;
-        h3 {
-          font-size: 1rem;
-        }
-    
-        hr {
-          margin: 0;
-          width: 52%;
-          border: solid 1px black;
-          background-color:$head-font-color;
-        }
-  
-        .hr-2 {
-          width: 31%;
-        }
-  
-        .hr-3 {
-          width: 25%;
-        }
-  
-        .hr-4 {
-          width: 41%;
-        }
-  
-        }
-  
-        &--body1 {
-          
-          max-width: 350px;
-          p {
-            padding: 0 1rem;
-          }
-  
-          .social {
-            padding: 0 1rem;
-            .address__img, .phone__img, .email__img {
-              width: 4vh;
-              padding: 0.2rem 0;
-              
-            }
-  
-  
-            .body__span {
-              padding:  0 1rem;
-              color:$head-font-color;
-             
-            }
-          }
-      }
-  
-      &--body2, &--body3 {
-        padding: 0 1rem;
-  
-        .body__li {
-          a {
-            color: black;
-          }
-  
-          a:hover {
-            color: grey;
-            @include transition-ease
-          }
-        }
-      }
-  
-      &--body4 {
-        padding: 0 1rem;
-  
-  
-  
-        .social {
-  
-          a {
-            color: black;
-          }
-  
-          a:hover {
-            color: grey;
-            @include transition-ease
-          }
-          .fb__img,.ig__img,.twitter__img {
-            width: 4vh;
-            padding: 0.2rem 0;
-            
-          }
-  
-         
-        }
-  
-        .box {
-          border: 1px solid #ffffff;
-          padding: 0.5rem;
-          margin: 1rem 0;
-          width: 300px;
-        }
-      }
-  
-  
-  
-      &--flex {
-  
-       
-        ul {
-          display: flex;
-          justify-content: space-around;
-          flex-wrap: wrap;
-          
-        }
-  
-        .box2 {
-          text-align: center;
-          flex-direction: column;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
-        }
-      }
-      
-    }
-  
-    .special {
-      text-align: center;
-      width: 100%;
-      margin: 2rem 2rem 0 2rem ;
-    }
-
-
-  }
-      
-  .hide {
+.hide {
     display: none;
-  }
+}
+
+
+
+
   @include media-sm {
 
 

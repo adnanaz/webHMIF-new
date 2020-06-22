@@ -27,7 +27,7 @@
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
 <script src="/assets/js/bootstrap.min.js"></script>
-
+<script src="/assets/js/main.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 
@@ -117,6 +117,19 @@
         };
     });
 
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("header-wrap").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-9%";
+            document.getElementById("header-wrap").style.top = "-9%";
+
+        }
+        prevScrollpos = currentScrollPos;
+    }
 
 </script>
 

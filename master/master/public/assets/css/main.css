@@ -8,14 +8,10 @@ body {
   background: #fff;
   color: set-text-color(#002382);
   height: 100vh;
-  font-family: "Varela Round", sans-serif;
+  font-family: 'Varela Round', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5 {
   font-weight: 400;
 }
 
@@ -52,11 +48,7 @@ html {
 }
 
 .color {
-  color: #ce2e6c;
-}
-
-.head {
-  padding-top: 10rem;
+  color: #CE2E6C;
 }
 
 .head .container-fluid {
@@ -177,8 +169,7 @@ html {
   line-height: 140%;
 }
 
-.visi h5,
-.visi p {
+.visi h5, .visi p {
   text-align: center;
 }
 
@@ -362,59 +353,29 @@ html {
   justify-content: center;
 }
 
-.ofc .img__merch {
-  width: 30vh;
-  height: auto;
-  margin: 1rem;
-}
-
-.footer__flex {
+.ofc .merchandise {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: column wrap;
 }
 
-.footer__flex-items {
-  margin: 0.5rem 0;
-}
-
-.footer__flex-items a {
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-  padding: 1rem 0;
-}
-
-.footer__flex-items a:hover {
-  color: #ce2e6c;
-}
-
-.footer__flex .footer__socmed {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
-
-.footer__flex .footer__socmed iframe {
-  margin: 1rem;
-}
-
-.footer__flex .footer__socmed a {
+.ofc .merchandise img {
   margin: 1rem 0;
+  padding: 0 2rem;
+  width: 100%;
 }
 
-.footer__flex .footer__socmed a img {
-  width: 5vh;
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+footer__ul li {
+  color: red;
 }
 
 .hide {
   display: none;
-}
-
-@media screen and (min-width: 350px) {
-  .youtube {
-    width: 100%;
-    height: 100%;
-  }
 }
 
 @media screen and (min-width: 460px) {
@@ -464,13 +425,10 @@ html {
 }
 
 @media screen and (min-width: 568px) {
-  h5,
-  h3 {
+  h5, h3 {
     font-size: 1.5rem !important;
   }
-  span,
-  p,
-  figcaption {
+  span, p, figcaption {
     font-size: 1.2rem;
   }
   .content__text {
@@ -513,11 +471,6 @@ html {
   .hide {
     display: flex;
   }
-  .lg-off {
-    position: relative !important;
-    margin-top: 0 !important;
-    background: transparent !important;
-  }
   .content__text {
     font-size: 1.5rem !important;
   }
@@ -527,9 +480,7 @@ html {
   h3 {
     font-size: 1.3rem !important;
   }
-  p,
-  figcaption,
-  span {
+  p, figcaption, span {
     font-size: 1.3rem;
   }
   .card-overlay {
@@ -601,7 +552,7 @@ html {
   top: 0.5rem;
   width: 28px;
   height: 3px;
-  background: #9a8ea5;
+  background: #9A8EA5;
   transition: all 0.5s ease-in-out;
 }
 
@@ -611,7 +562,7 @@ html {
   top: -8px;
   width: 28px;
   height: 3px;
-  background: #9a8ea5;
+  background: #9A8EA5;
   transition: all 0.5s ease-in-out;
 }
 
@@ -621,7 +572,7 @@ html {
   top: 8px;
   width: 20px;
   height: 3px;
-  background: #9a8ea5;
+  background: #9A8EA5;
   transition: all 0.5s ease-in-out;
 }
 
@@ -682,7 +633,7 @@ html {
 }
 
 .nav .menu-nav__item.active > a {
-  color: #ffc400;
+  color: #FFC400;
 }
 
 .nav .menu-nav__item .socmed {
@@ -706,7 +657,7 @@ html {
 }
 
 .nav .menu-nav__link:hover {
-  color: #ffc400;
+  color: #FFC400;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -746,7 +697,7 @@ html {
     transform: translateY(0);
     height: 55px;
     width: 100%;
-    background: #9a8ea5;
+    background: #9A8EA5;
     text-align: right;
     z-index: 2;
   }

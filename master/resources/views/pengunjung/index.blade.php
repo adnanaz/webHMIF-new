@@ -5,68 +5,71 @@
 @section('content')
 
 <body class="background">
-    <header class="">
-        <nav class="menu">
-            <div class="title">MENU</div>
-            <ul class="nav">
-                <li class="li-item"><a href="/" class="navbar-brand"><img class="logo" src="/assets/img/logo@2x.png"
-                            alt="logo-HMIF"></a></li>
-                <li class="li-item"><a href="/">Home</a></li>
-                <li class="li-item"><a href="#">About</a></li>
-                <li class="li-item"><a href="#">Work</a></li>
-                <li class="li-item"><a href="#">Resources</a></li>
-                <li class="li-item"><a href="#">Contact</a></li>
-                <li class="socmed"><img src="/assets/img/loc.png" width="17%" alt="Logo-Location"><br>
-                    <p class="mt-2">Gedung BSC Lt. 3
-                        Universitas Amikom Yk
-                        Yogyakarta</p>
+<header>
+        <div class="container-fluid mobileOn shadow" id="header-wrap">
+            <div class="menu-btn">
+                <span class="menu-btn__burger"></span>
+            </div>
+            <!-- <a class="navbar-brand p-2 float-right" href="#">
+                <img class="rounded-circle" src="/assets/img/logo.png" width="40" height="40" alt="">
+            </a> -->
+        </div>
+
+        <nav class="nav" id="navbar" style=" transition: top 0.5s;
+        height: 65px; position: fixed; z-index:2;">
+            <ul class="menu-nav lg-off">
+                <li class="menu-nav__item">
+                    <a class="navbar-brand mobileOn" href="#">
+                        <img class="rounded-circle" src="/assets/img/logo.png" width="100" height="100" alt="">
+                    </a>
                 </li>
-                <li class="socmed"><a class="" href="#"><img src="/assets/img/yt.png" alt="Logo-Youtube" width="30%"></a>
+                <li class="menu-nav__item active">
+                    <a href="index.html" class="menu-nav__link">
+                        Home
+                    </a>
                 </li>
-                <li class="socmed"><a class="" href="#"><img src="/assets/img/IG.png" alt="Logo-Youtube" width="30%"></a>
+                <li class="menu-nav__item">
+                    <a href="portofolio.html" class="menu-nav__link">
+                        Divisi
+                    </a>
                 </li>
-                <li class="socmed"><a class="" href="#"><img src="/assets/img/FB.png" alt="Logo-facebook"
-                            width="30%"></a>
+                <li class="menu-nav__item">
+                    <a href="contact.html" class="menu-nav__link">
+                        Bank Soal
+                    </a>
                 </li>
-                <li class="socmed"><a class="" href="#"><img src="/assets/img/Twitter.png" alt="Logo-Twitter"
-                            width="30%"></a>
+                <li class="menu-nav__item">
+                    <a href="contact.html" class="menu-nav__link">
+                        Bank Judul
+                    </a>
                 </li>
-                <li class="socmed"><a class="" href="#"><img src="/assets/img/Line.png" alt="Logo-Line" width="30%"></a>
+                <li class="menu-nav__item">
+                    <a href="contact.html" class="menu-nav__link">
+                        Visi & Misi
+                    </a>
                 </li>
-                <li class="socmed"><a class="" href="#"><img src="/assets/img/email.png" alt="Logo-email"
-                            width="30%"></a>
+                <li class="menu-nav__item mobileOn">
+                  <div class="socmed">
+                      <a href="https://www.youtube.com/channel/UCYIDh8u2A3fJ0Lzbmodf4ZQ"><img src="assets/img/yt.png" alt="logo Youtube"> </a>
+                      <a href="https://www.instagram.com/hmifamikom/"><img src="assets/img/IG.png" alt="logo Instagram"> </a>
+                      <a href="https://www.facebook.com/HMIF.AMIKOM"><img src="assets/img/FB.png" alt="logo Facebook"> </a>
+                      <a href="https://twitter.com/HMIF_amikom"><img src="assets/img/Twitter.png" alt="logo Twitter"> </a>
+                      <a href="http://Bit.ly/LINEHMIF"><img src="assets/img/line.svg" alt="logo Line"> </a>
+                      <a href="hmif@amikom.ac.id"><img src="assets/img/email.png" alt="logo Email"> </a>
+                  </div>
                 </li>
+                <li class="menu-nav__item text-center spesial">
+                    <a href="https://www.google.co.id/maps/place/Aula+BSC+Universitas+Amikom+Yogyakarta/@-7.7602201,110.4070384,17z/data=!3m1!4b1!4m5!3m4!1s0x2e7a59269674d7b7:0xb2541bf1571d1936!8m2!3d-7.7602254!4d110.4092271" class="menu-nav__link">
+                    <small>Gedung BSC Lantai 3 Universitas Amikom Yogyakarta</small> 
+                    </a>
+                </li>
+                <li class="menu-nav__item text-center">
+                    <a href="#"> <small>&copy;2020 – HMIF AMIKOM. All rights reserved. </small></a>   
+                </li>
+
+               
             </ul>
         </nav>
-
-        <nav class="navbar hide navbar-light bg-none">
-            <a class="pl-2 navbar-brand">
-                <img src="/assets/img/logohmif.svg" width="100" height="100" alt="">
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#divisi">Divisi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://www.banksoal.hmifamikom.org/">Bank Soal</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#berita">Berita Acara</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#artikel">Artikel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#visi">VISI & MISI</a>
-                </li>
-            </ul>
-        </nav>
-
-
-
 
         <section class="head">
             <div class="container-fluid">
@@ -83,11 +86,11 @@
     </header>
 
     <main>
-        <section class="berita mt-2 background2" id="berita">
+        <section class="berita  background2" id="berita">
             <div class="container-fluid">
                 <h5 class="color">BERITA ACARA</h5>
 
-                <div class="swiper-container">
+                <div class="swiper-container mt-5">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <article class="card-overlay">
@@ -200,9 +203,9 @@
                             </article>
                         </div>
                     </div>
-                    <!-- Add Pagination -->
+
                     <div class="swiper-pagination"></div>
-                    <!-- Add Arrows -->
+
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
@@ -213,10 +216,9 @@
         <section id="visi" class="visi mt-5">
             <div class="container-fluid">
                 <h5 class="color">VISI & MISI</h5>
-                <p> Ketua HMIF Angkatan 2019/2020</p>
 
                 <div class="visi__txt">
-                    <h5>VISI</h5>
+                    <h5 class="color">VISI</h5>
                     <p>Mewujudkan HMIF sebagai organisasi yang
                         berintegritas dan berkarakter sebagai wajah bagi
                         mahasiswa yang responsive, progresif, dan aktif
@@ -225,7 +227,7 @@
                 </div>
 
                 <div class="misi__txt">
-                    <h5>MISI</h5>
+                    <h5 class="color">MISI</h5>
                     <ul>
                         <li>
                             <p>Membangun sinergitas antara anggota dan
@@ -432,122 +434,173 @@
                             <label for="exampleFormControlTextarea1">Aspirasi/Komentar</label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" name="aspirasi" rows="10"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Kirim</button>
+                          <!-- Button trigger modal -->
+                        <button type="submit"  data-toggle="modal" data-target="#staticBackdrop" class="btn btn-primary">Kirim</button>
                     </form>
                 </div>
             </article>
+
+          
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Informasi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Aspirasi Telah Terkirim
+
+        <br>
+
+        Terimakasih telah memberikan aspirasi untuk Prodi informatika yang lebih baik
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
         </section>
 
         <section id="ofc" class="ofc  mt-5">
             <div class="flex-row">
-                <h5 class="color text-center mb-4">OFFICIAL ACCOUNT & MERCHANDISE</h5>
+                <h5 class="color text-center mb-4">OFFICIAL YOUTUBE</h5>
                 <div class="youtube mb-3 w-100 text-center">
-                    <iframe width="50%" height="350px" src="https://www.youtube.com/embed/QmhI520kq10" frameborder="0"
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QmhI520kq10" frameborder="0"
                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="merchandise">
-                    <a href="#"> <img src="/assets/img/merchant1.svg" alt="merchandise endorsement 1"></a>
-                    <a href="#"> <img src="/assets/img/merchant2.svg" alt="merchandise endorsement 2"></a>
-                    <a href="#"> <img src="/assets/img/merchant3.svg" alt="merchandise endorsement 3"></a>
-                    <a href="#"><img src="/assets/img/merchant4.png" alt="merchandise endorsement 4"></a>
+                        allowfullscreen  style="width: 100%; min-width: 300px;  max-width:500px; height: 100%;
+              min-height:350px; max-height:550px;"></iframe>
                 </div>
             </div>
+            <div class="swiper-container swiper3">
+            <div class="text-center">
+        <h5 class="color text-center mb-4">MERCHANDISE</h5>
+        </div>
+    <div class="swiper-wrapper"> 
+      <div class="swiper-slide slide__merch"><a href="#"> <img class="img__merch" src="/assets/img/merchant1.svg" alt="merchandise endorsement 1"></a></div>
+      <div class="swiper-slide slide__merch"> <a href="#"> <img class="img__merch" src="/assets/img/merchant2.svg" alt="merchandise endorsement 2"></a></div>
+      <div class="swiper-slide slide__merch"> <a href="#"> <img class="img__merch" src="/assets/img/merchant3.svg" alt="merchandise endorsement 3"></a></div>
+      <div class="swiper-slide slide__merch"> <a href="#"><img class="img__merch" src="/assets/img/merchant4.png" alt="merchandise endorsement 4"></a></div>
+      <div class="swiper-slide slide__merch"><a href="#"> <img class="img__merch" src="/assets/img/merchant1.svg" alt="merchandise endorsement 1"></a></div>
+      <div class="swiper-slide slide__merch"> <a href="#"> <img class="img__merch" src="/assets/img/merchant2.svg" alt="merchandise endorsement 2"></a></div>
+      <div class="swiper-slide slide__merch"> <a href="#"> <img class="img__merch" src="/assets/img/merchant3.svg" alt="merchandise endorsement 3"></a></div>
+      <div class="swiper-slide slide__merch"> <a href="#"><img class="img__merch" src="/assets/img/merchant4.png" alt="merchandise endorsement 4"></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
         </section>
 
-        <footer class="footer mt-5 shadow border">
-            <div class="container-fluid">
-                <div class="footer__flex">
+        <footer class="footer border mt-5 shadow-sm">
+        <div class="container-fluid">
+           <div class="footer__flex">
+               <div class="footer__flex-items">
+                   <h5>Direction</h5>
+                   <p>Gedung BSC Lt. 3 Universitas Amikom Yogyakarta</p>
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.2835233294077!2d110.40669181534786!3d-7.7597258944074055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a599bd3bdc4ef%3A0x6f1714b0c4544586!2sUniversitas%20Amikom%20Yogyakarta!5e0!3m2!1sid!2sid!4v1592828063709!5m2!1sid!2sid" 
+                width="100%" height="auto" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                 <div class="footer__socmed">
+                      <a href="https://www.youtube.com/channel/UCYIDh8u2A3fJ0Lzbmodf4ZQ"><img src="assets/img/yt.png" alt="logo Youtube"> </a>
+                      <a href="https://www.instagram.com/hmifamikom/"><img src="assets/img/IG.png" alt="logo Instagram"> </a>
+                      <a href="https://www.facebook.com/HMIF.AMIKOM"><img src="assets/img/FB.png" alt="logo Facebook"> </a>
+                      <a href="https://twitter.com/HMIF_amikom"><img src="assets/img/Twitter.png" alt="logo Twitter"> </a>
+                      <a href="http://Bit.ly/LINEHMIF"><img src="assets/img/line.svg" alt="logo Line"> </a>
+                      <a href="hmif@amikom.ac.id"><img src="assets/img/email.png" alt="logo Email"> </a>
+                  </div>
+               </div>
+               <div class="footer__flex-items">
+                   <h5>Menu</h5>
+                   <ul>
+                       <li><a href="#">Home</a></li>
+                       <li><a href="#">Divisi</a></li>
+                       <li><a href="#">Bank Soal</a></li>
+                       <li><a href="#">Bank Judul</a></li>
+                       <li><a href="#">Visi & Misi</a></li>
+                   </ul>
+                  
+            </div>
 
-                    <div class="footer__item">
-                        <div class="footer__item--head">
-                            <h3>Tentang HMIF AMIKOM</h3>
-                            <hr class="footer__hr hr-1">
-                        </div>
-
-                        <div class="footer__item--body1">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam in quisquam accusantium
-                                est neque. Placeat repellendus assumenda porro et dolore?</p>
-                            <div class="social">
-                                <img class="address__img" src="/assets/img/address.png" alt="icon-alamat">
-                                <span class="body__span">Gedung BSC Lt. 3 Universitas Amikom Yk Yogyakarta</span>
-                                <br>
-                                <img class="phone__img" src="/assets/img/phone.png" alt="icon-alamat">
-                                <span class="body__span">+628 777 111 </span>
-                                <br>
-                                <img class="email__img" src="/assets/img/email.png" alt="icon-alamat">
-                                <span class="body__span">www.hmifamikom.org </span>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="footer__item">
-                        <div class="footer__item--head">
-                            <h3>Menu Featured</h3>
-                            <hr class="footer__hr hr-2">
-                        </div>
-
-                        <div class="footer__item--body2">
-                            <ul class="body__ul">
-                                <li class="body__li"><a href="#"><span class="body__span">Landing Page</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Divisi</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Youtube </span></a>
-                                </li>
-                                <li class="body__li"><a href="#"><span class="body__span">Official
-                                            Merchandise</span></a></li>
-                                <li class="body__li"><a href="#"><span class="body__span">Visi & Misi </span></a>
-                                <li class="body__li"><a href="#"><span class="body__span">Visi & Misi </span></a>
-                                </li>
-                            </ul>
-
-
-                        </div>
-                    </div>
-
-                    <div class="footer__item">
-                        <div class="footer__item--head">
-                            <h3>TRACK HMIF ON</h3>
-                            <hr class="footer__hr hr-4">
-                        </div>
-
-
-                        <div class="footer__item--body4">
-                            <div class="social">
-                                <img class="fb__img" src="/assets/img/fb.png" alt="icon-fb">
-                                <a href="#"><span class="body__span">hmifamikom</span></a>
-                                <br>
-                                <img class="ig__img" src="/assets/img/ig.png" alt="icon-ig">
-                                <a href="#"><span class="body__span">@hmifamikom </span></a>
-                                <br>
-                                <img class="twitter__img" src="/assets/img/twitter.png" alt="icon-twitter">
-                                <a href="#"><span class="body__span">hmifamikom@org.com </span></a>
-                                <br>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer__item special">
-                        <div class="footer__item--flex">
-                            <ul class="">
-                                Sitemaps </li>
-                                <li>SearchUs </li>
-                                <li>Advance </li>
-                                <li>Contact HMIF </li>
-                            </ul>
-                            <div class="box2">
-                                <span class="copy">2020 - HMIF Universitas Amikom Yogyakarta
-                                </span>
-
-                                <span class="copy"> &copy All Rights Reserved.</span>
-                            </div>
-                        </div>
-                    </div>
+               <div class="footer__flex-items">
+                   <h5>Berita Acara</h5>
+                   <ul>
+                       <li><a href="#">LATIHAN DASAR KEPEMIMPINAN DAN MANAJEMEN ORGANISASI HMIF 2019/2020</a></li>
+                       <li><a href="#">BELAJAR BARENG BERSAMA HMIF UAS GANJIL</a></li>
+                       <li><a href="#">BELAJAR BARENG BERSAMA HMIF UAS GANJIL</a></li>
+                       <li><a href="#">SEMINAR DAN WORKSHOP METOPEN INFORMATIKA 2019</a></li>
+                   </ul>
                 </div>
+
+
+               <div class="footer__flex-items">
+                   <h5>Article HMIF</h5>
+                   <ul>
+                       <li><a href="#"> Tips Tetap Produktif Disaat Corona</a></li>
+                       <li><a href="#"> Cara manajemen waktu antara tugas dan organisasi</a></li>
+                       <li><a href="#"> Punya penghasilan tetap walaupun</a></li>
+                       <li><a href="#"> Tips Tetap Produktif Disaat Corona</a></li>
+                       <li><a href="#"> Tips Tetap Produktif Disaat Corona</a></li>
+                   </ul>
+                </div>
+
+
+           </div>
+        
+           <div class="text-center">
+               <small>HMIF AMIKOM</small>
+               <br>
+              <small> &copy All right reserved - 2020</small>
+           </div>
+        </div>
         </footer>
     </main>
+    
+    <script>
+    var swiper = new Swiper('.swiper3', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+            350: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+
+            1400: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
+
+            1600: {
+                slidesPerView: 5,
+                spaceBetween: 50,
+            }
+        }
+    });
+  </script>
 </body>
+
+
 
 @endsection
