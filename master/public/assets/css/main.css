@@ -46,9 +46,10 @@ html {
 }
 
 .background {
-  background: url("../img/bgfs.svg") center no-repeat;
+  background: url("../img/bg-gede.svg") center no-repeat;
   background-size: cover;
   background-size: 100%;
+  background-position-y: 1%;
 }
 
 .color {
@@ -85,7 +86,6 @@ html {
 
 .head .container-fluid .fig__img2 {
   width: 150px;
-  padding-top: 5rem;
 }
 
 .flex-model {
@@ -105,7 +105,7 @@ html {
 .berita .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -113,7 +113,7 @@ html {
 }
 
 .berita .swiper-slide .card-overlay {
-  max-width: 20rem;
+  max-width: 25rem;
   margin: 0 auto;
   padding: 1.5rem;
 }
@@ -199,6 +199,10 @@ html {
   justify-content: center;
 }
 
+.divisi .flex .flex-dynamic a {
+  text-decoration: none;
+}
+
 .divisi .flex .flex-dynamic figure {
   margin: 1rem;
 }
@@ -219,7 +223,7 @@ html {
 .artikel .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: transparent;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
@@ -227,7 +231,7 @@ html {
 }
 
 .artikel .card-overlay {
-  max-width: 20rem;
+  max-width: 25rem;
   margin: 0 auto;
   padding: 1.5rem;
 }
@@ -292,7 +296,7 @@ html {
 }
 
 .aspirasiOnline .card-overlay {
-  max-width: 20rem;
+  max-width: 25rem;
   margin: 0 auto;
   padding: 1.5rem;
 }
@@ -363,47 +367,58 @@ html {
 }
 
 .ofc .img__merch {
-  width: 30vh;
+  width: 45vh;
   height: auto;
   margin: 1rem;
 }
 
-.footer__flex {
+footer {
+  background: #504658;
+  color: white;
+}
+
+footer .footer__flex {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.footer__flex-items {
+footer .footer__flex-items {
   margin: 0.5rem 0;
 }
 
-.footer__flex-items a {
+footer .footer__flex-items a {
+  color: #fff;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
   padding: 1rem 0;
 }
 
-.footer__flex-items a:hover {
+footer .footer__flex-items a:hover {
   color: #ce2e6c;
 }
 
-.footer__flex .footer__socmed {
+footer .footer__flex .footer__socmed {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
 }
 
-.footer__flex .footer__socmed iframe {
+footer .footer__flex .footer__socmed iframe {
   margin: 1rem;
 }
 
-.footer__flex .footer__socmed a {
+footer .footer__flex .footer__socmed a {
   margin: 1rem 0;
 }
 
-.footer__flex .footer__socmed a img {
+footer .footer__flex .footer__socmed a img {
   width: 5vh;
+}
+
+.read-more-link,
+.read-less-link {
+  color: blue;
 }
 
 .hide {
@@ -411,9 +426,37 @@ html {
 }
 
 @media screen and (min-width: 350px) {
-  .youtube {
-    width: 100%;
-    height: 100%;
+  .lgOn {
+    display: none;
+  }
+  .head {
+    padding-top: 4rem;
+  }
+  .head .container-fluid {
+    padding: 1rem;
+  }
+  .head .container-fluid .content__text {
+    text-align: center;
+    margin-top: 0;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+  }
+  .head .container-fluid .fig1 {
+    padding: 1rem 11rem 0rem 0rem;
+    text-align: left;
+  }
+  .head .container-fluid .fig__img {
+    width: 108px;
+  }
+  .head .container-fluid .fig2 {
+    text-align: right;
+  }
+  .head .container-fluid .fig__img2 {
+    width: 150px;
+  }
+  .dummies__img,
+  .dummies__img2 {
+    display: none;
   }
 }
 
@@ -432,14 +475,14 @@ html {
   }
   .head .container-fluid .fig1 {
     padding: 1rem 12rem 0rem 0rem;
-    text-align: center;
+    text-align: left;
   }
   .head .container-fluid .fig__img {
     width: 165px;
   }
   .head .container-fluid .fig2 {
     padding: 1rem 0 0rem 0rem;
-    text-align: center;
+    text-align: right;
   }
   .head .container-fluid .fig__img2 {
     width: 250px;
@@ -513,10 +556,46 @@ html {
   .hide {
     display: flex;
   }
+  #navbar {
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
   .lg-off {
     position: relative !important;
     margin-top: 0 !important;
     background: transparent !important;
+  }
+  .head {
+    padding-top: 0;
+  }
+  .head .container-fluid {
+    padding: 1rem;
+  }
+  .head .container-fluid .content__text {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    font-size: 1rem;
+  }
+  .head .container-fluid .fig1 {
+    padding: 0;
+    text-align: center;
+  }
+  .head .container-fluid .fig__img {
+    width: 108px;
+  }
+  .head .container-fluid .fig2 {
+    text-align: center;
+    padding: 0;
+  }
+  .head .container-fluid .fig__img2 {
+    width: 150px;
+  }
+  .flex-model {
+    padding: 0 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
   .content__text {
     font-size: 1.5rem !important;
@@ -535,6 +614,13 @@ html {
   .card-overlay {
     max-width: 35rem !important;
   }
+  footer {
+    padding: 1rem;
+  }
+  footer .footer__flex-items {
+    margin: 1rem;
+    flex-basis: 1fr 1fr 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -551,6 +637,120 @@ html {
   }
   h3 {
     font-size: 1.3rem !important;
+  }
+  .aspirasi__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .aspirasi__flex .card-overlay {
+    margin: 0;
+  }
+  .aspirasi__flex .card-overlay .card {
+    width: 30rem;
+  }
+  .aspirasi__flex .dummies__img {
+    display: block;
+  }
+  .yt__flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .yt__flex .dummies__img2 {
+    display: block;
+  }
+  .yt__flex .ytframe {
+    width: 100vh;
+    height: 50vh;
+  }
+  footer .footer__flex-items {
+    max-width: 350px;
+  }
+  footer iframe {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #navbar {
+    top: 35px;
+  }
+  .lgOn {
+    display: block;
+    position: absolute;
+    display: flex;
+    top: 0;
+  }
+  .lgOn img {
+    width: 100px;
+    height: 100px;
+    margin: 1rem;
+  }
+  .lgOn h4 {
+    max-width: 200px;
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.5rem;
+  }
+  .head .container-fluid {
+    padding: 1rem;
+  }
+  .head .container-fluid .content__text {
+    text-align: center;
+    margin-top: 6rem;
+    padding: 0 10rem;
+    font-size: 1.5rem !important;
+  }
+  .head .container-fluid .fig1 {
+    text-align: center;
+  }
+  .head .container-fluid .fig__img {
+    width: 30vh;
+  }
+  .head .container-fluid .fig2 {
+    text-align: center;
+  }
+  .head .container-fluid .fig__img2 {
+    width: 50vh;
+  }
+  .flex-model {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #navbar {
+    top: 35px;
+  }
+  .head .container-fluid {
+    padding: 1rem;
+  }
+  .head .container-fluid .content__text {
+    text-align: center;
+    margin-top: 6rem;
+    padding: 0 15rem;
+    font-size: 2rem !important;
+  }
+  .head .container-fluid .fig1 {
+    text-align: center;
+  }
+  .head .container-fluid .fig__img {
+    width: 30vh;
+  }
+  .head .container-fluid .fig2 {
+    text-align: center;
+  }
+  .head .container-fluid .fig__img2 {
+    width: 50vh;
+  }
+  .flex-model {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 
@@ -606,7 +806,7 @@ html {
 }
 
 .menu-btn__burger::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -8px;
   width: 28px;
@@ -616,7 +816,7 @@ html {
 }
 
 .menu-btn__burger::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   width: 20px;
@@ -644,9 +844,13 @@ html {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   opacity: 0.98;
   visibility: hidden;
+  transition: top 0.5s;
+  height: 65px;
+  position: fixed;
+  z-index: 2;
 }
 
 .nav.open {
@@ -660,7 +864,7 @@ html {
   justify-content: center;
   height: 100vh;
   width: 100vh;
-  margin-top: 2rem;
+  margin-top: 1rem;
   overflow: hidden;
   background: #ffffff;
   list-style-type: none;
@@ -698,9 +902,9 @@ html {
 
 .nav .menu-nav__link {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   font-weight: 300;
   transition: all 0.5s ease-in-out;
 }
@@ -755,7 +959,7 @@ html {
     padding-right: 1.5rem;
   }
   .nav .menu-nav__link {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #504658;
     padding: 1rem 0;
     text-decoration: none;

@@ -88,3 +88,8 @@ html {
         @content;
     }
 }
+@mixin media-xxl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

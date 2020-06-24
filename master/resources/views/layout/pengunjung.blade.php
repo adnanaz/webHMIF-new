@@ -94,8 +94,8 @@
             var shortText = $pTag.text();
             shortText = shortText.substring(0, 200);
             $pTag.addClass('fullArticle').hide();
-            shortText += '<a href="#" class="read-more-link">baca lebih banyak -></a>';
-            $pTag.append('<a href="#" class="read-less-link"> &lt- baca lebih sedikit</a>');
+            shortText += '<a href="#" class="read-more-link">baca lebih banyak..</a>';
+            $pTag.append('<a href="#" class="read-less-link"> &lt- baca lebih sedikit..</a>');
             $(this).append('<p class="preview">' + shortText + '</p>');
         }
     });
