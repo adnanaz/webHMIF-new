@@ -156,15 +156,10 @@ class AdminEventController extends Controller
 
         }
 
-        $event->judul = $request->judul;
-        $event->slug = Str::slug($request->judul);
-        $event->tanggal_kegiatan = $request->tanggal_kegiatan;
-        $event->berita_acara = $request->berita_acara;
-        $event->gambar = json_encode($insert);
-
         $event->judul = $request->judul?$request->judul : $event->judul;
         $event->slug = Str::slug($request->judul);
         $event->tanggal_kegiatan = $request->tanggal_kegiatan?$request->tanggal_kegiatan : $event->tanggal_kegiatan;
+        $event->berita_acara = $request->berita_acara?$request->berita_acara : $event->berita_acara;
         $event->gambar = $request->file('uploadFile')?$insert : $event->gambar;
 
         $event->update();

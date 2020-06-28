@@ -67,7 +67,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('dashboard.dashboard') }}" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -130,7 +130,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('adminheader.edit') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Header</p>
                                     </a>
@@ -165,9 +165,17 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('adminmerchandise.create') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Tambah Data</p>
+                                        <p>Tambah Merchandise</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('adminyoutube.create') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Youtube</p>
                                     </a>
                                 </li>
                             </ul>
@@ -180,6 +188,14 @@
                                     <i class="fas fa-angle-left right"></i>
                                 </p>
                             </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="{{ route('tambahakun.newakun') }}" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tambah Akun</p>
+                                    </a>
+                                </li>
+                            </ul>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="{{ route('gantipassword.index') }}" class="nav-link">

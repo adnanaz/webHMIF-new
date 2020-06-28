@@ -18,13 +18,14 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/','UtamaController@index')->name('utama.index');
-Route::get('/detailberitaacara','EventController@index')->name('detailberitaacara.index');
-Route::get('/detailartikel','ArtikelController@index')->name('detailartikel.index');
+Route::get('/detailberitaacara/{berita}','EventController@show')->name('detailberitaacara.index');
+Route::get('/detailartikel/{artikel}','ArtikelController@show')->name('detailartikel.index');
 
 Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , function(){
     Route::get('/','AspirationController@dashboard')->name('dashboard.dashboard');
     Route::get('/gantipassword','GantiPasswordController@index')->name('gantipassword.index');
     Route::post('/password','GantiPasswordController@changePassword')->name('gantipassword.changePassword');
+    Route::get('/tambahakun','GantiPasswordController@newakun')->name('tambahakun.newakun');
 
     Route::group(['prefix' => 'artikel'], function () {
         Route::get('/tambah','AdminArtikelController@create')->name('adminartikel.create');

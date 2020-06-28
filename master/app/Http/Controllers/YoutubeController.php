@@ -29,7 +29,9 @@ class YoutubeController extends Controller
      */
     public function create()
     {
-        return view('admin.tambahyoutube');
+        $preview = Youtube::orderBy('id', 'desc')->take(1)->get();
+        
+        return view('admin.tambahyoutube', compact('preview'));
     }
 
     /**
@@ -48,7 +50,7 @@ class YoutubeController extends Controller
         $youtube->url = $request->url;
 
         $youtube->save();
-        return('Berhasil disimpan');
+        return back()->with('success', 'Content Youtube Berhasil Diganti!');
     }
 
     /**

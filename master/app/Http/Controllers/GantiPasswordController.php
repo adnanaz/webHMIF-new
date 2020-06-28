@@ -33,4 +33,9 @@ class GantiPasswordController extends Controller
         $user->save();
         return back()->with('success', 'Password berhasil diganti');
     }
+
+    public function newakun()
+    {
+        return view('admin.tambahakun');
+    }
 }
