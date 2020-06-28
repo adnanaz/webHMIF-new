@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
+use App\Article;
+use App\Youtube;
+use App\Merchandise;
+use App\Header;
 
 class UtamaController extends Controller
 {
@@ -13,7 +18,12 @@ class UtamaController extends Controller
      */
     public function index()
     {
-        return view('pengunjung.index');
+        $beritaAcara = Event::inRandomOrder()->take(6)->get();
+        $articles = Article::inRandomOrder()->take(6)->get();
+        $youtube = Youtube::orderBy('id', 'desc')->take(1)->get();
+        $merchandise = Merchandise::get();
+        $header = Header::findOrFail(1);
+        return view('pengunjung.index', compact('beritaAcara', 'articles', 'youtube', 'merchandise', 'header'));
     }
 
     /**

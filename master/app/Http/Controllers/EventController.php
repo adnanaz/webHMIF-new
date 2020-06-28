@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Event;
+use App\Article;
 
 class EventController extends Controller
 {
@@ -13,7 +15,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('pengunjung.detailberitaacara');
+        //
     }
 
     /**
@@ -43,9 +45,13 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $berita = Event::where('slug', $slug)->firstOrFail();
+        $beritaAcara = Event::inRandomOrder()->take(6)->get();
+        $articles = Article::inRandomOrder()->take(6)->get();
+
+        return view('pengunjung.detailberitaacara', compact('berita', 'beritaAcara', 'articles'));
     }
 
     /**

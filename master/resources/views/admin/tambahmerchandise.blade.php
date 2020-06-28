@@ -1,37 +1,112 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layout.admin')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+@section('title','Tambah Merchandise')
 
-    <title>Merchandise</title>
-  </head>
-  <body>
-    <div class="container">
-    <h1>Merchandise</h1>
-        <form action="{{ route('adminmerchandise.store') }}" method="POST" enctype="multipart/form-data">
-            {{ csrf_field() }}
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Gambar</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="gambar">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1">Url</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" name="url">
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+@section('content')
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
-</html>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+  @endif
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+      <div class="container-fluid">
+          <div class="row mb-2">
+              <div class="col-sm-6">
+                  <h5>Tambah Data MERCHANDISE</h5>
+              </div>
+              <div class="col-sm-6">
+                  <ol class="breadcrumb float-sm-right">
+                      <li class="breadcrumb-item"><a href="#">MERCHANDISE</a></li>
+                      <li class="breadcrumb-item active">Tambah Data</li>
+                  </ol>
+              </div>
+          </div>
+      </div><!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+      <div class="row">
+          <div class="col-12">
+              <div class="container">
+                <form action="{{ route('adminmerchandise.store') }}" method="POST" enctype="multipart/form-data">
+                  {{ csrf_field() }}
+                      <div class="form-group">
+
+                          <div>
+                              <div class="form-group hirehide is-empty is-fileinput width100">
+                                  <div class="socialmediaside2">
+                                      <input class="fileUpload" name="gambar" accept="image/jpeg, image/jpg"
+                                          name="profilepic[]" type="file" value="Choose a file">
+                                      <div class="input-group">
+                                          <input class="form-control" id="uploadre"
+                                              placeholder="Please select your profile picture" readonly>
+                                          <span class="input-group-btn input-group-sm"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="upload-demo">
+                                  <div class="upload-demo-wrap"><img alt="your image" class="portimg" src="#">
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="exampleInputEmail1">Url</label>
+                              <input type="text" class="form-control" id="exampleInputEmail1" name="url">
+                          </div>
+
+                              <button type="submit" class="btn btn-primary w-100">Simpan Perubahan</button>
+
+                      </div>
+                    </form>
+              </div>
+              <!-- /.col -->
+          </div>
+          <!-- /.row -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<script>
+      // uplaod image function
+       function readURL() {
+      var $input = $(this);
+      var $newinput = $(this).parent().parent().parent().find('.portimg ');
+      if (this.files && this.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              reset($newinput.next('.delbtn'), true);
+              $newinput.attr('src', e.target.result).show();
+              $newinput.after('<input type="button" class="delbtn removebtn" value="remove">');
+          }
+          reader.readAsDataURL(this.files[0]);
+      }
+  }
+  $(".fileUpload").change(readURL);
+  $("form").on('click', '.delbtn', function (e) {
+      reset($(this));
+  });
+
+  function reset(elm, prserveFileName) {
+      if (elm && elm.length > 0) {
+          var $input = elm;
+          $input.prev('.portimg').attr('src', '').hide();
+          if (!prserveFileName) {
+              $($input).parent().parent().parent().find('input.fileUpload ').val("");
+              //input.fileUpload and input#uploadre both need to empty values for particular div
+          }
+          elm.remove();
+      }
+  }
+</script>
+
+@endsection

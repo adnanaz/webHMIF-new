@@ -67,7 +67,7 @@ class MerchandiseController extends Controller
         $merchandise->url = $request->url;
 
         $merchandise->save();
-        return('Berhasil disimpan');
+        return back()->with('success', 'Merchandise Berhasil Ditambahkan!');
     }
 
     /**

@@ -1,32 +1,44 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+@extends('layout.admin')
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+@section('title','Tambah Artikel')
 
-    <title>Aspirasi</title>
-  </head>
-  <body>
-    <div class="container">
-    <h1>Aspirasi</h1>
-        <form action="{{ route('adminheader.update', $header) }}" method="POST" enctype="multipart/form-data">
-            {{ csrf_field() }}
-            <div class="form-group">
-                <label for="exampleInputEmail1">Kata Bijak</label>
-                <input type="text" class="form-control" name="kata_bijak" value="{{ $header->kata_bijak }}">
+@section('content')
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h5>Edit Your Header Here</h5>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="preview" style="background: url('/assets/img/preview__header.png') center top;
+                background-size: cover; padding: 17rem 5rem 20rem 5rem; width:100%">
+                    <h5 class="text-center">{{ $header->kata_bijak }}</h5>
+                </div>
+                <!-- /.col -->
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div>
+            <div class="col-12">
+              <form action="{{ route('adminheader.update', $header) }}" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                    <div class="form-group">
+                        <label for="judul">Header-Post</label>
+                        <input type="text" class="form-control" id="judul" name="kata_bijak" value="{{ $header->kata_bijak }}" aria-describedby="judulhelp">
+                        <small id="judulhelp" class="form-text text-muted">Isi Tulisan yang ingin
+                            dirubah</small>
+                    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
-</html>
+                    <button type="submit" class="btn btn-warning mt-2 w-100">Preview</button>
+                    <button type="submit" class="btn btn-primary mt-2 w-100">Submit</button>
+                </form>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+@endsection

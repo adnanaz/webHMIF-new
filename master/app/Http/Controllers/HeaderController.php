@@ -86,7 +86,7 @@ class HeaderController extends Controller
 
         $header->update();
 
-        return back();
+        return back()->with('success', 'Content Header Berhasil Diedit!!');
     }
 
     /**
