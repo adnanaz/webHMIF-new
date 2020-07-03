@@ -62,7 +62,7 @@ class HeaderController extends Controller
      */
     public function edit()
     {
-        $header = Header::findOrFail(1);
+        $header = Header::find(1);
 
         return view('admin.editheader', compact('header'));
     }

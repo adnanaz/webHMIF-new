@@ -95,7 +95,7 @@ class YoutubeController extends Controller
      */
     public function destroy($id)
     {
-        $youtube = Youtube::findOrFail($id);
+        $youtube = Youtube::find($id);
 
         $youtube->delete();
 

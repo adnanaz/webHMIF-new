@@ -101,7 +101,7 @@ class AdminArtikelController extends Controller
      */
     public function edit($id)
     {
-        $artikel = Article::findOrFail($id);
+        $artikel = Article::find($id);
 
         return view('admin.editartikel', compact('artikel'));
     }
@@ -178,7 +178,7 @@ class AdminArtikelController extends Controller
      */
     public function destroy($id)
     {
-        $artikel = Article::findOrFail($id);
+        $artikel = Article::find($id);
         
         $images = json_decode($artikel->gambar);
         if (is_array($images) || is_object($images))
