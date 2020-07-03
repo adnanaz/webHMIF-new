@@ -22,7 +22,7 @@ class UtamaController extends Controller
         $articles = Article::inRandomOrder()->take(6)->get();
         $youtube = Youtube::orderBy('id', 'desc')->take(1)->get();
         $merchandise = Merchandise::get();
-        $header = Header::findOrFail(1);
+        $header = Header::find(1);
         return view('pengunjung.index', compact('beritaAcara', 'articles', 'youtube', 'merchandise', 'header'));
     }
 

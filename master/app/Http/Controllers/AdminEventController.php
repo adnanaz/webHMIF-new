@@ -99,7 +99,7 @@ class AdminEventController extends Controller
      */
     public function edit($id)
     {
-        $event = Event::findOrFail($id);
+        $event = Event::find($id);
 
         return view('admin.editberita', compact('event'));
     }
@@ -175,7 +175,7 @@ class AdminEventController extends Controller
      */
     public function destroy($id)
     {
-        $event = Event::findOrFail($id);
+        $event = Event::find($id);
         
         $images = json_decode($event->gambar);
         if (is_array($images) || is_object($images))

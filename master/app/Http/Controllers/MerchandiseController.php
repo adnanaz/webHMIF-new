@@ -112,7 +112,7 @@ class MerchandiseController extends Controller
      */
     public function destroy($id)
     {
-        $merchandise = Merchandise::findOrFail($id);
+        $merchandise = Merchandise::find($id);
         unlink(storage_path("app/public/merchandise/{$merchandise->gambar}"));
 
         $merchandise->delete();

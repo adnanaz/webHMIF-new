@@ -107,7 +107,7 @@ class AspirationController extends Controller
      */
     public function destroy($id)
     {
-        $merchandise = Aspiration::findOrFail($id);
+        $merchandise = Aspiration::find($id);
 
         $merchandise->delete();
 
