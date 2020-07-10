@@ -20,7 +20,7 @@
         </div>
     </section>
 
-    <section class="berita  background2" id="berita">
+    <section class="berita background2" id="berita">
         <div class="container-fluid">
             <h5 class="color">BERITA ACARA</h5>
 
@@ -38,7 +38,7 @@
                                         </div>
                                         <h5>{{ $item->judul }}</h5>
                                         <div class="textLimit">
-                                            <p>{!! Str::limit($item->berita_acara, 200, '...') !!}</p>
+                                            <p>{!! Str::limit($item->berita_acara, 200, ' <strong class="text-primary">Read more...</strong>') !!}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -57,7 +57,7 @@
         </div>
     </section>
 
-    <section id="visi" class="visi my-5">
+    <section class="visi my-5" id="visi">
         <div class="container-fluid">
             <h5 class="color">VISI & MISI</h5>
 
@@ -99,14 +99,14 @@
         </div>
     </section>
 
-    <section id="struktur" class="struktur text-center mt-5">
+    <section class="struktur text-center mt-5" id="struktur">
         <h5 class="color">STRUKTUR ORGANISASI</h5>
         <p>Susunan Dalam Organisasi HMIF 2019/2020</p>
         <a href="#"><img class="img__struktur" width="100%" src="/assets/img/struktur.png"
                 alt="Foto Struktur Organisasi HMIF"></a>
     </section>
 
-    <section id="divisi" class="divisi mt-5">
+    <section class="divisi mt-5" id="divisi">
         <div class="flex text-center">
             <h5 class="color mb-4">DIVISI HMIF</h5>
             <div class="flex-dynamic">
@@ -138,7 +138,7 @@
         </div>
     </section>
 
-    <section id="artikel" class="artikel mt-5">
+    <section  class="artikel mt-5" id="artikel">
         <div class="container-fluid text-center">
             <h5 class="color">ARTIKEL HMIF</h5>
             <p>Berisikan Informasi Kuliah,Tips,Artikel yang bermanfaat</p>
@@ -156,9 +156,9 @@
                                             <?php $image = json_decode($item->gambar)[0]; ?>
                                             <img width="100%" src="{{ asset('storage/artikel/'.$image) }}" alt="Event photos">
                                         </div>
-                                        <h5>{{ $item->judul }}</h5>
+                                        <h2>{{ $item->judul }}</h2>
                                         <div class="textLimit">
-                                            <p>{!! Str::limit($item->artikel, 200, '...') !!}</p>
+                                            <p>{!! Str::limit($item->artikel, 144, ' <strong class="text-primary">Read more...</strong>') !!}</p>
                                         </div>
                                     </div>
                                 </a>
@@ -174,7 +174,7 @@
         </div>
     </section>
 
-    <section id="aspirasi" class="aspirasiOnline text-center mt-5">
+    <section class="aspirasiOnline text-center mt-5" id="aspirasi">
         <h5 class="color">KOLOM ASPIRASI</h5>
         <p>Aspirasikan Suaramu disini guna Informatika yang lebih baik</p>
         
@@ -228,7 +228,7 @@
         </div>
     </section>
 
-    <section id="ofc" class="ofc mt-5">
+    <section  class="ofc mt-5" id="ofc">
         <div class="text-center my-5">
         <h5 class="color">OFFICIAL YOUTUBE</h5>
         <p>Ikuti kegiatan resmi HMIF Amikom di Official Account kami.</p>
@@ -263,45 +263,6 @@
         </div>
     </section>
     
-    <script>
-    var swiper = new Swiper('.swiper3', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-            350: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-
-            640: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 30,
-            },
-            1024: {
-                slidesPerView: 3,
-                spaceBetween: 40,
-            },
-
-            1400: {
-                slidesPerView: 4,
-                spaceBetween: 50,
-            },
-
-            1600: {
-                slidesPerView: 5,
-                spaceBetween: 50,
-            }
-        }
-    });
-  </script>
 </body>
 
 

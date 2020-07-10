@@ -46,7 +46,7 @@ html {
 }
 
 .background {
-  background: url("../img/bg-gede.svg") center no-repeat;
+  background: url("../img/bodybg.svg") center no-repeat;
   background-size: cover;
   background-size: 100%;
   background-position-y: 1%;
@@ -166,9 +166,10 @@ html {
   color: #504658;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  font-size: 1.2rem;
 }
 
 .berita .swiper-slide .card-overlay .card p {
@@ -367,8 +368,8 @@ html {
 }
 
 .ofc .img__merch {
-  width: 45vh;
-  height: auto;
+  width: 350px;
+  height: 32vh;
   margin: 1rem;
 }
 
@@ -458,6 +459,23 @@ footer .footer__flex .footer__socmed a img {
   .dummies__img2 {
     display: none;
   }
+  .berita .swiper-slide .card-overlay .card {
+    display: inline-block;
+    width: 100%;
+    padding: 5rem 1rem;
+    background-color: seashell;
+    position: relative;
+    height: auto;
+  }
+  .berita .swiper-slide .card-overlay {
+    padding: 0.5rem;
+  }
+  .artikel .card-overlay {
+    padding: 0.5rem;
+  }
+  .aspirasiOnline .card-overlay .card {
+    padding: 1rem;
+  }
 }
 
 @media screen and (min-width: 460px) {
@@ -473,19 +491,24 @@ footer .footer__flex .footer__socmed a img {
     padding: 0 1rem;
     font-size: 1rem;
   }
+  .head .container-fluid .flex-model {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
   .head .container-fluid .fig1 {
-    padding: 1rem 12rem 0rem 0rem;
+    padding: 0;
     text-align: left;
   }
   .head .container-fluid .fig__img {
-    width: 165px;
+    width: 100px;
   }
   .head .container-fluid .fig2 {
-    padding: 1rem 0 0rem 0rem;
+    padding: 0;
     text-align: right;
   }
   .head .container-fluid .fig__img2 {
-    width: 250px;
+    width: 140px;
   }
   .divisi .flex {
     margin: 5rem 0;
@@ -507,7 +530,7 @@ footer .footer__flex .footer__socmed a img {
 }
 
 @media screen and (min-width: 568px) {
-  h5,
+  .color,
   h3 {
     font-size: 1.5rem !important;
   }
@@ -533,14 +556,17 @@ footer .footer__flex .footer__socmed a img {
     text-align: left;
   }
   .head .container-fluid .fig__img {
-    width: 165px;
+    width: 100px;
   }
   .head .container-fluid .fig2 {
     padding-right: 2rem;
     text-align: right;
   }
   .head .container-fluid .fig__img2 {
-    width: 250px;
+    width: 155px;
+  }
+  .berita .swiper-slide .card-overlay {
+    padding: 1.5rem;
   }
   .divisi .flex {
     margin: 5rem 0;
@@ -549,6 +575,17 @@ footer .footer__flex .footer__socmed a img {
   }
   .divisi .flex figcaption {
     margin: 1rem 0;
+  }
+  .berita .swiper-slide .card-overlay .card {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: seashell;
+    position: relative;
+    height: 750px;
+  }
+  .ytframe {
+    height: 400px;
   }
 }
 
@@ -600,19 +637,13 @@ footer .footer__flex .footer__socmed a img {
   .content__text {
     font-size: 1.5rem !important;
   }
-  h5 {
-    font-size: 1.7rem !important;
-  }
-  h3 {
-    font-size: 1.3rem !important;
-  }
   p,
   figcaption,
   span {
     font-size: 1.3rem;
   }
-  .card-overlay {
-    max-width: 35rem !important;
+  .berita .swiper-slide .card-overlay {
+    padding: 0.5rem;
   }
   footer {
     padding: 1rem;
@@ -624,6 +655,15 @@ footer .footer__flex .footer__socmed a img {
 }
 
 @media screen and (min-width: 1024px) {
+  .head .container-fluid {
+    padding-top: 5rem;
+  }
+  .head .container-fluid .fig__img {
+    width: 148px;
+  }
+  .head .container-fluid .fig__img2 {
+    width: 230px;
+  }
   .flex-model {
     display: flex;
     flex-flow: row wrap;
@@ -631,9 +671,6 @@ footer .footer__flex .footer__socmed a img {
   }
   .menu {
     display: none;
-  }
-  h5 {
-    font-size: 1.7rem !important;
   }
   h3 {
     font-size: 1.3rem !important;
@@ -653,14 +690,28 @@ footer .footer__flex .footer__socmed a img {
   .aspirasi__flex .dummies__img {
     display: block;
   }
+  .berita .preview__img img {
+    width: 380px;
+    height: 250px;
+  }
+  .berita .swiper-slide .card-overlay .card {
+    height: 640px;
+  }
+  .artikel .card-overlay .card {
+    height: 640px;
+  }
   .yt__flex {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin: 0 1rem;
   }
   .yt__flex .dummies__img2 {
     display: block;
+  }
+  .yt__flex .dummies__img2 img {
+    width: 40vh;
   }
   .yt__flex .ytframe {
     width: 100vh;
@@ -676,7 +727,7 @@ footer .footer__flex .footer__socmed a img {
 
 @media screen and (min-width: 1200px) {
   #navbar {
-    top: 35px;
+    top: 20px;
   }
   .lgOn {
     display: block;
@@ -699,7 +750,7 @@ footer .footer__flex .footer__socmed a img {
   }
   .head .container-fluid .content__text {
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 8rem;
     padding: 0 10rem;
     font-size: 1.5rem !important;
   }
@@ -724,10 +775,14 @@ footer .footer__flex .footer__socmed a img {
 
 @media screen and (min-width: 1600px) {
   #navbar {
-    top: 35px;
+    top: 30px;
+  }
+  .swiper-slide {
+    margin: 0 1rem;
   }
   .head .container-fluid {
     padding: 1rem;
+    margin-top: 3rem;
   }
   .head .container-fluid .content__text {
     text-align: center;
@@ -970,6 +1025,15 @@ a {
   color: #504658;
 }
 
+.berita .container {
+  overflow: hidden;
+}
+
+.card-overlay__detail .card__detail .preview__img .swiper-slide {
+  /* background: #fff; */
+  background: none !important;
+}
+
 .card-overlay__detail {
   margin: 0 auto;
   padding: 1.5rem;
@@ -977,6 +1041,7 @@ a {
 
 .card-overlay__detail .card__detail {
   display: inline-block;
+  overflow: hidden;
   width: 100%;
   padding: 4rem 1rem 7rem 1rem;
   background-color: seashell;
@@ -984,11 +1049,11 @@ a {
 }
 
 .card-overlay__detail .card__detail .preview__img {
-  max-width: 100vh;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-.card-overlay__detail .card__detail .preview__img .swiper-container {
+.card-overlay__detail .card__detail .preview__img .swiper-berita {
   width: 100%;
   height: 100%;
 }
@@ -1048,5 +1113,10 @@ a {
   color: #504658;
   font-size: 1.1rem;
   line-height: 140%;
+}
+
+.berita .preview__img2 img {
+  width: 100vh;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

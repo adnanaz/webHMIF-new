@@ -64,6 +64,77 @@
                                     <small id="uploadhelp" class="form-text text-muted">upload bisa lebih dari 1
                                         file.</small>
                                 </div>
+
+                                <!-- ini form yang ada previewnya dim -->
+                                <!-- <div>
+                                        <div class="form-group hirehide is-empty is-fileinput width100">
+                                            <div class="socialmediaside2">
+                                                <input class="fileUpload" accept="image/jpeg, image/jpg"
+                                                    name="profilepic[]" type="file" value="Choose a file">
+                                                <div class="input-group">
+                                                    <input class="form-control" id="uploadre"
+                                                        placeholder="Please select your profile picture" readonly>
+                                                    <span class="input-group-btn input-group-sm"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-demo">
+                                            <div class="upload-demo-wrap"><img alt="your image" class="portimg" src="#">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-group hirehide is-empty is-fileinput width100">
+                                            <div class="socialmediaside2">
+                                                <input class="fileUpload" accept="image/jpeg, image/jpg"
+                                                    name="profilepic[]" type="file" value="Choose a file">
+                                                <div class="input-group">
+                                                    <input class="form-control" id="uploadre"
+                                                        placeholder="Please select your profile picture" readonly>
+                                                    <span class="input-group-btn input-group-sm"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-demo">
+                                            <div class="upload-demo-wrap"><img alt="your image" class="portimg" src="#">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-group hirehide is-empty is-fileinput width100">
+                                            <div class="socialmediaside2">
+                                                <input class="fileUpload" accept="image/jpeg, image/jpg"
+                                                    name="profilepic[]" type="file" value="Choose a file">
+                                                <div class="input-group">
+                                                    <input class="form-control" id="uploadre"
+                                                        placeholder="Please select your profile picture" readonly>
+                                                    <span class="input-group-btn input-group-sm"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-demo">
+                                            <div class="upload-demo-wrap"><img alt="your image" class="portimg" src="#">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="form-group hirehide is-empty is-fileinput width100">
+                                            <div class="socialmediaside2">
+                                                <input class="fileUpload" accept="image/jpeg, image/jpg"
+                                                    name="profilepic[]" type="file" value="Choose a file">
+                                                <div class="input-group">
+                                                    <input class="form-control" id="uploadre"
+                                                        placeholder="Please select your profile picture" readonly>
+                                                    <span class="input-group-btn input-group-sm"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="upload-demo">
+                                            <div class="upload-demo-wrap"><img alt="your image" class="portimg" src="#">
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <!-- end upload yang ada previewnya -->
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
@@ -76,6 +147,8 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+    <script src="/plugins/jquery/jquery.min.js"></script>
     <script>
         CKEDITOR.replace( 'berita' , {
             width: 1120,
@@ -86,5 +159,36 @@
             filebrowserUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
             filebrowserImageUploadUrl: '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images'
         });
+
+           // uplaod image function
+           function readURL() {
+            var $input = $(this);
+            var $newinput = $(this).parent().parent().parent().find('.portimg ');
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    reset($newinput.next('.delbtn'), true);
+                    $newinput.attr('src', e.target.result).show();
+                    $newinput.after('<input type="button" class="delbtn removebtn" value="remove">');
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        }
+        $(".fileUpload").change(readURL);
+        $("form").on('click', '.delbtn', function (e) {
+            reset($(this));
+        });
+
+        function reset(elm, prserveFileName) {
+            if (elm && elm.length > 0) {
+                var $input = elm;
+                $input.prev('.portimg').attr('src', '').hide();
+                if (!prserveFileName) {
+                    $($input).parent().parent().parent().find('input.fileUpload ').val("");
+                    //input.fileUpload and input#uploadre both need to empty values for particular div
+                }
+                elm.remove();
+            }
+        }
     </script>
 @endsection
