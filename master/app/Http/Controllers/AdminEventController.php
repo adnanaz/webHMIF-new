@@ -18,7 +18,9 @@ class AdminEventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::orderBy('id', 'DESC')->paginate(8);
+
+        return view('admin.adminberita', compact('events'));
     }
 
     /**

@@ -1049,4 +1049,8 @@ a {
   font-size: 1.1rem;
   line-height: 140%;
 }
+
+.card__flex figure img {
+  width: 10vh !important;
+}
 /*# sourceMappingURL=main.css.map */

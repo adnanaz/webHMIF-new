@@ -28,6 +28,7 @@ Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , func
     Route::get('/tambahakun','GantiPasswordController@newakun')->name('tambahakun.newakun');
 
     Route::group(['prefix' => 'artikel'], function () {
+        Route::get('/','AdminArtikelController@index')->name('adminartikel.index');
         Route::get('/tambah','AdminArtikelController@create')->name('adminartikel.create');
         Route::post('/tambah','AdminArtikelController@store')->name('adminartikel.store');
         Route::get('/{id}/edit','AdminArtikelController@edit')->name('adminartikel.edit');
@@ -36,6 +37,7 @@ Route::group(['prefix'=>'adminhimpunanmahasiswaif', 'middleware'=>'auth'] , func
     });
 
     Route::group(['prefix' => 'berita'], function () {
+        Route::get('/','AdminEventController@index')->name('adminberita.index');
         Route::get('/tambah','AdminEventController@create')->name('adminberita.create');
         Route::post('/tambah','AdminEventController@store')->name('adminberita.store');
         Route::get('/{id}/edit','AdminEventController@edit')->name('adminberita.edit');
