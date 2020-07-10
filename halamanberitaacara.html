@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>AdminLTE 3 | Dashboard</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bbootstrap 4 -->
+    <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- EXTERNAL CSS -->
+</head>
+
+<style>
+    .card__flex {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .card__flex figure {
+        max-width: 18rem;
+        margin: auto;
+    }
+
+    .card__flex figure img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .anchor__icon a {
+        margin: 0 1rem;
+    }
+
+    @media screen and (min-width: 768px) {
+        
+
+        .card__flex {
+        text-align: center;
+        display: flex;
+        width: 697px;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .card__flex figure img{
+        width: 229.8px;
+        height: 229.8px;
+    }
+
+    .card__flex figure {
+        max-width: 18rem;
+    }
+
+    .card__caption {
+        text-align: center;
+    }
+
+    .card__caption .textLimit {
+        padding: 0 1rem;
+    }
+
+    .card__caption hr {
+        margin: 1rem;
+    }
+    }
+
+    @media screen and (min-width: 1024px) {
+       .card__flex{
+        width: 700px;
+       }
+       
+        .card__flex figure img{
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    .card__flex figure {
+        max-width: 20rem;
+    }
+    }
+
+    @media screen and (min-width: 1200px) {
+       .card__flex{
+        width: 850px;
+       }
+       
+        .card__flex figure img{
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    .card__flex figure {
+        max-width: 20rem;
+    }
+    }
+
+    @media screen and (min-width: 1400px) {
+       .card__flex{
+        width: 1000px;
+       }
+       
+        .card__flex figure img{
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    .card__flex figure {
+        max-width: 25rem;
+    }
+    }
+</style>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="index3.html" class="nav-link">Home</a>
+                </li>
+
+            </ul>
+
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="index.admin.html" class="brand-link">
+                <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <span class="brand-text font-weight-light">AdminLTE 3 x HMIF</span>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="dist/img/user2-160x160.jpg" width="160px" height="160px"
+                            class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">User Name</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+                        <li class="nav-item has-treeview ">
+                            <a href="#" class="nav-link ">
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>
+                                    Dashboard
+                                    <i class="right fas fa-angle-left"></i>
+                                    <span class="badge badge-info right">2</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="./berita.admin.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Isi Berita</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./artikel.admin.html" class="nav-link  ">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Isi Artikel</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Edit Content
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right">1</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="edit.content.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Header</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon fas fa-shopping-cart"></i>
+                                <span class="badge badge-info right">1</span>
+                                <p>
+                                    Artikel
+                                    <i class="right fas fa-angle-left"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="aspirasi.admin.html" class="nav-link active">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dashboard</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-edit"></i>
+                                <span class="badge badge-info right">2</span>
+                                <p>
+                                    Account
+                                    <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="add.account.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Buat akun</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="edit.password.html" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Edit akun</p>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-table"></i>
+                                <p>
+                                    Logout
+                                </p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <span class="msg">
+                                <h5>Dashboard Berita Acara</h5>
+                            </span>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">Dashboard Berita Acara</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <span class="card-title">
+                                    <h5>Dashboard Berita Acara</h5>
+                                </span>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body mx-auto">         
+                                <div class="container">
+                                    <!-- ini yang nnti kmu perulanganin dim -->
+                                    <div class="border shadow card__flex">
+                                        <figure class="shadow border tex-">
+                                            <img src="assets/img/FotoSemnas19.jpg" alt="preview photos">
+                                        </figure>
+
+                                        <div class="card__caption">
+                                            <h2 class="judul">Seminar Nasional 2019</h2>
+                                            <h5 class="text-primary" ><small>20 Agustus 2020</small></h5>
+                                            <div class="textLimit">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                                    culpa
+                                                    blanditiis
+                                                    sit,
+                                                    laboriosam at praesentium maxime esse voluptas. Quos aliquid, possimus
+                                                    eum
+                                                    itaque
+                                                    accusamus nihil reprehenderit nesciunt excepturi quas sint.</p>
+                                                </div>
+                                                    <hr>
+                                                    <div class="anchor__icon text-center">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-edit"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="border shadow card__flex">
+                                        <figure class="shadow border tex-">
+                                            <img src="assets/img/FotoSemnas19.jpg" alt="preview photos">
+                                        </figure>
+
+                                        <div class="card__caption">
+                                            <h2 class="judul">Seminar Nasional 2019</h2>
+                                            <h5 class="text-primary" ><small>20 Agustus 2020</small></h5>
+                                            <div class="textLimit">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                                    culpa
+                                                    blanditiis
+                                                    sit,
+                                                    laboriosam at praesentium maxime esse voluptas. Quos aliquid, possimus
+                                                    eum
+                                                    itaque
+                                                    accusamus nihil reprehenderit nesciunt excepturi quas sint.</p>
+                                                </div>
+                                                    <hr>
+                                                    <div class="anchor__icon text-center">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-edit"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="border shadow card__flex">
+                                        <figure class="shadow border tex-">
+                                            <img src="assets/img/FotoSemnas19.jpg" alt="preview photos">
+                                        </figure>
+
+                                        <div class="card__caption">
+                                            <h2 class="judul">Seminar Nasional 2019</h2>
+                                            <h5 class="text-primary" ><small>20 Agustus 2020</small></h5>
+                                            <div class="textLimit">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                                    culpa
+                                                    blanditiis
+                                                    sit,
+                                                    laboriosam at praesentium maxime esse voluptas. Quos aliquid, possimus
+                                                    eum
+                                                    itaque
+                                                    accusamus nihil reprehenderit nesciunt excepturi quas sint.</p>
+                                                </div>
+                                                    <hr>
+                                                    <div class="anchor__icon text-center">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-edit"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="border shadow card__flex">
+                                        <figure class="shadow border tex-">
+                                            <img src="assets/img/Giving-Your-Opinion.jpg" alt="preview photos">
+                                        </figure>
+
+                                        <div class="card__caption">
+                                            <h2 class="judul">Seminar Nasional 2019</h2>
+                                            <h5 class="text-primary" ><small>20 Agustus 2020</small></h5>
+                                            <div class="textLimit">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                                    culpa
+                                                    blanditiis
+                                                    sit,
+                                                    laboriosam at praesentium maxime esse voluptas. Quos aliquid, possimus
+                                                    eum
+                                                    itaque
+                                                    accusamus nihil reprehenderit nesciunt excepturi quas sint.</p>
+                                                </div>
+                                                    <hr>
+                                                    <div class="anchor__icon text-center">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-edit"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <div class="border shadow card__flex">
+                                        <figure class="shadow border tex-">
+                                            <img src="assets/img/FotoSemnas19.jpg" alt="preview photos">
+                                        </figure>
+
+                                        <div class="card__caption">
+                                            <h2 class="judul">Seminar Nasional 2019</h2>
+                                            <h5 class="text-primary" ><small>20 Agustus 2020</small></h5>
+                                            <div class="textLimit">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                                                    culpa
+                                                    blanditiis
+                                                    sit,
+                                                    laboriosam at praesentium maxime esse voluptas. Quos aliquid, possimus
+                                                    eum
+                                                    itaque
+                                                    accusamus nihil reprehenderit nesciunt excepturi quas sint.</p>
+                                                </div>
+                                                    <hr>
+                                                    <div class="anchor__icon text-center">
+                                                        <a href="#"><i class="fas fa-eye"></i></a>
+                                                        <a href="#"><i class="fas fa-edit"></i></a>
+                                                        <a href="#"><i class="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                          
+                                        </div>
+                                    </div>
+                                    <!-- end perulangan -->
+
+                              
+                                    <!-- pagination -->
+                                    <nav aria-label="..." class=" d-flex justify-content-center">
+                                        <ul class="pagination shadow">
+                                          <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                          </li>
+                                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                          <li class="page-item active" aria-current="page">
+                                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                          </li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                          </li>
+                                        </ul>
+                                      </nav>
+                                      <!-- end pagination -->
+                                </div>
+
+
+                            </div>
+                            <!-- /.card-body -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        <footer class="main-footer">
+            <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io edited on
+                    OneCode.id</a>.</strong>
+            All rights reserved.
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 3.0.4
+            </div>
+        </footer>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+    <script>
+        $.widget.bridge('uibutton', $.ui.button)
+    </script>
+    <!-- Bootstrap 4 -->
+    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- ChartJS -->
+    <script src="plugins/chart.js/Chart.min.js"></script>
+    <!-- Sparkline -->
+    <script src="plugins/sparklines/sparkline.js"></script>
+    <!-- JQVMap -->
+    <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+    <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+    <!-- daterangepicker -->
+    <script src="plugins/moment/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Summernote -->
+    <script src="plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- overlayScrollbars -->
+    <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+            $('#example2').DataTable({
+                "paging": true,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": true,
+                "info": true,
+                "autoWidth": false,
+                "responsive": true,
+            });
+        });
+
+           //text limiter 
+    $('.textLimit').each(function () {
+        var $pTag = $(this).find('p');
+        if ($pTag.text().length > 100) {
+            var shortText = $pTag.text();
+            shortText = shortText.substring(0, 200);
+            $pTag.addClass('fullArticle').hide();
+            shortText += '<a href="#" class="read-more-link">Read More</a>';
+            $pTag.append('<a href="#" class="read-less-link"> less</a>');
+            $(this).append('<p class="preview">' + shortText + '</p>');
+        }
+    });
+
+    $(document).on('click', '.read-more-link', function () {
+        $(this).parent().hide().prev().show();
+    });
+
+    $(document).on('click', '.read-less-link', function () {
+        $(this).parent().hide().next().show();
+    });
+
+    $(document).ready(function () {
+        if (window.location.hash) {
+            var hash = window.location.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 10000);
+        };
+    });
+        
+    </script>
+</body>
+
+</html>

@@ -1,3 +1,11 @@
 a {
-    color: $head-font-color;
+  color: $head-font-color;
+}
+
+.card__flex {
+  figure {
+    img {
+      width: 10vh !important;
+    }
+  }
 }
