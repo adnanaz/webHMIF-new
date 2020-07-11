@@ -194,7 +194,6 @@ class AdminArtikelController extends Controller
 
         $artikel->delete();
 
-        return('berhasil dihapus');
-        // return back()->with('success', 'Product Berhasil Di Hapus!');
+        return back()->with('success', 'Artikel Berhasil Di Hapus!');
     }
 }
