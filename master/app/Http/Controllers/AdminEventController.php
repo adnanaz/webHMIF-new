@@ -166,7 +166,7 @@ class AdminEventController extends Controller
 
         $event->update();
 
-        return('berhasil diedit');
+        return redirect()->route('adminberita.index')->with('success', 'Berita Acara Berhasil Di Edit!');
     }
 
     /**

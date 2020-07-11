@@ -168,8 +168,7 @@ class AdminArtikelController extends Controller
 
         $artikel->update();
 
-        return('berhasil diedit');
-        // return redirect()->route('admin.product')->with('success', 'Product Berhasil Di Edit!');
+        return redirect()->route('adminartikel.index')->with('success', 'Artikel Berhasil Di Edit!');
     }
 
     /**
