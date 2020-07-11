@@ -27,9 +27,11 @@
     <link rel="stylesheet" href="/plugins/daterangepicker/daterangepicker.css">
     <!-- CkEditor -->
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
+    <!-- summernote -->
+    <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
+    <!-- EXTERNAL CSS -->
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -84,7 +86,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('adminberita.index') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Berita Acara</p>
                                     </a>
@@ -107,7 +109,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{ route('adminartikel.index') }}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Artikel</p>
                                     </a>
