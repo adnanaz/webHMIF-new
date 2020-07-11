@@ -163,7 +163,7 @@
                                             <hr>
                                             <div class="anchor__icon text-center">
                                                 <a href="{{ route('detailartikel.index', $article->slug) }}"><i class="fas fa-eye"></i></a>
-                                                <a href="#"><i class="fas fa-edit"></i></a>
+                                                <a href="{{ route('adminartikel.edit', $article) }}"><i class="fas fa-edit"></i></a>
                                                 <a href="{{ route('adminartikel.delete', $article) }}"><i class="fas fa-trash-alt"></i></a>
                                             </div>
                                     </div>

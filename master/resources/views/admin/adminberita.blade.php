@@ -150,7 +150,8 @@
                                 <!-- ini yang nnti kmu perulanganin dim -->
                                 <div class="border shadow card__flex">
                                     <figure class="shadow border tex-">
-                                        <img src="/assets/img/FotoSemnas19.jpg" alt="preview photos">
+                                        <?php $image = json_decode($event->gambar)[0]; ?>
+                                        <img src="{{ asset('storage/event/'.$image) }}" alt="preview photos">
                                     </figure>
 
                                     <div class="card__caption">
@@ -162,7 +163,7 @@
                                                 <hr>
                                                 <div class="anchor__icon text-center">
                                                     <a href="{{ route('detailberitaacara.index', $event->slug) }}"><i class="fas fa-eye"></i></a>
-                                                    <a href="#"><i class="fas fa-edit"></i></a>
+                                                    <a href="{{ route('adminberita.edit', $event) }}"><i class="fas fa-edit"></i></a>
                                                     <a href="{{ route('adminberita.delete', $event) }}"><i class="fas fa-trash-alt"></i></a>
                                                 </div>
                                     
