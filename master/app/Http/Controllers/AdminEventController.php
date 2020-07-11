@@ -192,7 +192,6 @@ class AdminEventController extends Controller
 
         $event->delete();
 
-        return('berhasil dihapus');
-        // return back()->with('success', 'Product Berhasil Di Hapus!');
+        return back()->with('success', 'Berita Acara Berhasil Di Hapus!');
     }
 }
