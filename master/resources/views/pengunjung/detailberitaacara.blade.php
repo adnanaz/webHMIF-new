@@ -1,4 +1,4 @@
-@extends('layout.pengunjung')
+@extends('layout.detail')
 
 @section('title','Detail Berita Acara')
 
