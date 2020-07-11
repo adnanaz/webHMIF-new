@@ -102,7 +102,7 @@
     <section class="struktur text-center mt-5" id="struktur">
         <h5 class="color">STRUKTUR ORGANISASI</h5>
         <p>Susunan Dalam Organisasi HMIF 2019/2020</p>
-        <a href="#"><img class="img__struktur" width="100%" src="/assets/img/struktur.png"
+        <a href="#"><img class="img__struktur" width="100%" src="/assets/img/foto-kepengurusan.png"
                 alt="Foto Struktur Organisasi HMIF"></a>
     </section>
 
@@ -156,7 +156,7 @@
                                             <?php $image = json_decode($item->gambar)[0]; ?>
                                             <img width="100%" src="{{ asset('storage/artikel/'.$image) }}" alt="Event photos">
                                         </div>
-                                        <h2>{{ $item->judul }}</h2>
+                                        <h5>{{ $item->judul }}</h5>
                                         <div class="textLimit">
                                             <p>{!! Str::limit($item->artikel, 144, ' <strong class="text-primary">Read more...</strong>') !!}</p>
                                         </div>
