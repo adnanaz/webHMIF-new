@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/assets/css/swiper.css">
     <link rel="stylesheet" href="/assets/css/swiper.min.css">
 </head>
-    <body data-spy="scroll" data-target="#scroll-ku" data-offset="1" class="background">
+    <body  class="background">
     <header>
         <div class="container-fluid mobileOn shadow" id="header-wrap">
             <div class="menu-btn">
@@ -22,7 +22,7 @@
             </div>
         </div>
 
-        <nav class="nav" id="navbar scroll-ku">
+        <nav class="nav" id="navbar">
             <ul class="menu-nav lg-off">
                 <li class="menu-nav__item">
                     <a class="navbar-brand mobileOn" href="#">

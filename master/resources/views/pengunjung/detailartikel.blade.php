@@ -5,9 +5,8 @@
 @section('content')
     <section class="berita mt-2 background2" id="berita">
         <div class="container-fluid">
-            <h5 class="color">ARTICLE HMIF</h5>
 
-            <article class="container">
+            <article class="container mt-5">
                     <figure>
                     <?php foreach (json_decode($artikel->gambar)as $picture) { ?>
                                     <div class="swiper-slide"> 
