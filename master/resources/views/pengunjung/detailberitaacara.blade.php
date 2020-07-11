@@ -5,7 +5,7 @@
 @section('content')
 
     <section class="berita">
-        <div class="container-fluid ">
+        <div class="container ">
             <h5 class="color">BERITA ACARA HMIF</h5>
 
             <article class="card-overlay__detail">
